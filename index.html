@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXSW 2026 Music Playlist Recommender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --text: #f5f5f0;
+            --accent-1: #c8ff00;
+            --accent-2: #ff6b35;
+            --muted: #888888;
+            --card-bg: #1a1a1a;
+            --border: #2a2a2a;
+            --font-primary: 'Space Grotesk', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--text);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .header-branding {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .sxsw-badge {
+            display: inline-block;
+            background: var(--accent-1);
+            color: var(--bg);
+            padding: 8px 16px;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+        }
+
+        .sxsw-badge:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--accent-1);
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font-primary);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-1);
+            color: var(--bg);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--text);
+        }
+
+        /* Main layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Chat Interface */
+        .chat-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 25px;
+            box-shadow: none;
+        }
+
+        .chat-section h2 {
+            color: var(--accent-1);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mood-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .mood-btn, .moment-btn, .energy-btn {
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            font-family: var(--font-primary);
+        }
+
+        .mood-btn:hover, .moment-btn:hover, .energy-btn:hover {
+            border-color: var(--accent-1);
+            background: rgba(200, 255, 0, 0.05);
+        }
+
+        .mood-btn.active, .moment-btn.active, .energy-btn.active {
+            background: var(--accent-1);
+            border-color: var(--accent-1);
+            color: var(--bg);
+        }
+
+        .moment-buttons, .energy-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .energy-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--border);
+            outline: none;
+            -webkit-appearance: none;
+            margin-bottom: 10px;
+        }
+
+        .energy-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            background: var(--accent-1);
+            cursor: pointer;
+            border: 2px solid var(--bg);
+        }
+
+        .energy-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            background: var(--accent-1);
+            cursor: pointer;
+            border: 2px solid var(--bg);
+        }
+
+        .genre-select {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 2px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: var(--font-primary);
+            transition: all 0.2s ease;
+        }
+
+        .genre-select:focus {
+            outline: none;
+            border-color: var(--accent-1);
+        }
+
+        .genre-select option {
+            background: var(--card-bg);
+            color: var(--text);
+        }
+
+        .btn-generate {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            color: var(--accent-1);
+            border: 2px solid var(--accent-1);
+            border-radius: 2px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            font-family: var(--font-primary);
+            margin-top: 20px;
+        }
+
+        .btn-generate:hover {
+            background: var(--accent-1);
+            color: var(--bg);
+        }
+
+        .btn-generate:active {
+            opacity: 0.9;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 25px;
+            box-shadow: none;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .results-section::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .results-section::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .results-section::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 2px;
+        }
+
+        .results-section::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-1);
+        }
+
+        .results-section h2 {
+            color: var(--accent-1);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .result-placeholder {
+            color: var(--muted);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Artist Card */
+        .artist-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artist-card:hover {
+            border-color: var(--accent-1);
+            background: rgba(200, 255, 0, 0.02);
+        }
+
+        .artist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .artist-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-1);
+            margin-bottom: 5px;
+        }
+
+        .artist-meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .tier-badge {
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            min-width: 100px;
+            font-family: var(--font-mono);
+        }
+
+        .tier-badge.hot {
+            background: transparent;
+            border-color: var(--accent-2);
+            color: var(--accent-2);
+        }
+
+        .tier-badge.headliner {
+            background: transparent;
+            border-color: var(--accent-1);
+            color: var(--accent-1);
+        }
+
+        .tier-badge.gem {
+            background: transparent;
+            border-color: var(--accent-2);
+            color: var(--accent-2);
+        }
+
+        .tier-badge.local {
+            background: transparent;
+            border-color: var(--accent-1);
+            color: var(--accent-1);
+        }
+
+        .feature-bars {
+            margin: 15px 0;
+        }
+
+        .feature-bar {
+            margin-bottom: 10px;
+        }
+
+        .feature-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 5px;
+            font-family: var(--font-mono);
+        }
+
+        .bar-background {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            background: var(--accent-1);
+            transition: width 0.5s ease;
+        }
+
+        .bar-fill.energy {
+            background: var(--accent-1);
+        }
+
+        .bar-fill.danceability {
+            background: var(--accent-1);
+        }
+
+        .bar-fill.valence {
+            background: var(--accent-1);
+        }
+
+        .artist-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-spotify {
+            flex: 1;
+            padding: 10px;
+            background: transparent;
+            color: var(--accent-1);
+            border: 1px solid var(--accent-1);
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-family: var(--font-primary);
+        }
+
+        .btn-spotify:hover {
+            background: var(--accent-1);
+            color: var(--bg);
+        }
+
+        /* Pre-built Playlists */
+        .playlists-section {
+            margin-top: 40px;
+        }
+
+        .playlists-section h2 {
+            color: var(--text);
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .playlists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .playlist-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .playlist-card:hover {
+            border-color: var(--accent-1);
+            background: rgba(200, 255, 0, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .playlist-emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .playlist-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .playlist-desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .playlist-count {
+            display: inline-block;
+            background: transparent;
+            padding: 8px 15px;
+            border: 1px solid var(--accent-1);
+            border-radius: 2px;
+            font-size: 0.85rem;
+            color: var(--accent-1);
+            font-weight: 600;
+            font-family: var(--font-mono);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .playlists-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .mood-buttons, .moment-buttons, .energy-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .mood-btn, .moment-btn, .energy-btn {
+                width: 100%;
+            }
+
+            .chat-section, .results-section {
+                padding: 15px;
+            }
+
+            .results-section {
+                max-height: none;
+            }
+
+            .playlists-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lang-toggle {
+                top: 10px;
+                right: 10px;
+                gap: 5px;
+            }
+
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-1);
+            animation: pulse 1.5s infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .empty-state {
+            text-align: center;
+            color: var(--muted);
+            padding: 30px;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" data-lang="pt" onclick="switchLanguage('pt')">Português</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>🎵 SXSW 2026 Playlist Recommender</h1>
+            <p class="subtitle" data-text="subtitle">Discover your perfect SXSW soundtrack</p>
+            <div class="header-branding">
+                <a href="https://sxsw.md/" class="sxsw-badge">SXSW.MD →</a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Chat Interface -->
+            <div class="chat-section">
+                <h2>
+                    <span data-text="chat-title">What's your vibe?</span>
+                    <div class="loading"></div>
+                </h2>
+
+                <div class="form-group">
+                    <label data-text="mood-label">Mood</label>
+                    <div class="mood-buttons">
+                        <button class="mood-btn" data-mood="energetic" onclick="selectMood('energetic')">
+                            <span data-text="mood-energetic">⚡ Energetic</span>
+                        </button>
+                        <button class="mood-btn" data-mood="chill" onclick="selectMood('chill')">
+                            <span data-text="mood-chill">🌊 Chill</span>
+                        </button>
+                        <button class="mood-btn" data-mood="happy" onclick="selectMood('happy')">
+                            <span data-text="mood-happy">😊 Happy</span>
+                        </button>
+                        <button class="mood-btn" data-mood="melancholic" onclick="selectMood('melancholic')">
+                            <span data-text="mood-melancholic">🌙 Melancholic</span>
+                        </button>
+                        <button class="mood-btn" data-mood="intense" onclick="selectMood('intense')">
+                            <span data-text="mood-intense">🔥 Intense</span>
+                        </button>
+                        <button class="mood-btn" data-mood="danceable" onclick="selectMood('danceable')">
+                            <span data-text="mood-danceable">💃 Danceable</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-text="moment-label">What's happening?</label>
+                    <div class="moment-buttons">
+                        <button class="moment-btn" data-moment="warmup" onclick="selectMoment('warmup')">
+                            <span data-text="moment-warmup">🎤 Pre-show warmup</span>
+                        </button>
+                        <button class="moment-btn" data-moment="walking" onclick="selectMoment('walking')">
+                            <span data-text="moment-walking">🚶 Walking around</span>
+                        </button>
+                        <button class="moment-btn" data-moment="afterparty" onclick="selectMoment('afterparty')">
+                            <span data-text="moment-afterparty">🎉 After party</span>
+                        </button>
+                        <button class="moment-btn" data-moment="morning" onclick="selectMoment('morning')">
+                            <span data-text="moment-morning">☕ Morning coffee</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-text="energy-label">Energy Level</label>
+                    <input type="range" id="energySlider" class="energy-slider" min="0" max="100" value="50" oninput="updateEnergyValue()">
+                    <div style="text-align: right; font-size: 0.9rem; color: var(--muted); font-family: var(--font-mono);">
+                        <span id="energyValue">Medium</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="genreSelect" data-text="genre-label">Preferred Genre</label>
+                    <select id="genreSelect" class="genre-select">
+                        <option value="" data-text="genre-any">Any Genre</option>
+                        <option value="hip-hop">Hip-Hop / Rap</option>
+                        <option value="rock">Rock / Punk</option>
+                        <option value="electronic">Electronic / House</option>
+                        <option value="latin">Latin / Reggaeton</option>
+                        <option value="country">Country / Americana</option>
+                        <option value="indie">Indie / Alternative</option>
+                        <option value="pop">Pop</option>
+                        <option value="rnb">R&B / Soul</option>
+                    </select>
+                </div>
+
+                <button class="btn-generate" onclick="generatePlaylist()" data-text="btn-generate">
+                    Generate Recommendations
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h2>
+                    <span data-text="results-title">🎧 Your Playlist</span>
+                </h2>
+                <div id="results" class="result-placeholder" data-text="results-empty">
+                    👈 Describe what you're looking for
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-built Playlists -->
+        <div class="playlists-section">
+            <h2 data-text="playlists-title">🎵 Curated SXSW Playlists</h2>
+            <div class="playlists-grid" id="playlistsGrid">
+                <!-- Generated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Embedded artist data
+        const artistsData = [{"name": "The All-American Rejects", "tier": "headliner", "genre": "Pop Punk/Emo", "origin": "USA", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "10.5M monthly listeners", "listener_number": 10.5, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": false, "category": "headliners", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 125, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 10500000, "spotify_popularity": 75, "spotify_genres": ["Pop Punk", "Emo"]}, {"name": "Charley Crockett", "tier": "headliner", "genre": "Country/Americana", "origin": "USA (TX)", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "1.5M monthly listeners", "listener_number": 1.5, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 100, "avg_acousticness": 0.7, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 1500000, "spotify_popularity": 55, "spotify_genres": ["Country", "Americana"]}, {"name": "Passion Pit", "tier": "headliner", "genre": "Indie Electronic", "origin": "USA", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "3.6M monthly listeners", "listener_number": 3.6, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 3600000, "spotify_popularity": 55, "spotify_genres": ["Indie Electronic"]}, {"name": "Gogol Bordello", "tier": "headliner", "genre": "Punk Rock/Klezmer", "origin": "USA/Ukraine", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 125, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Punk Rock", "Klezmer"]}, {"name": "Los Lobos", "tier": "headliner", "genre": "Rock/Latin", "origin": "USA (LA)", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "4.5M monthly listeners", "listener_number": 4.5, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "headliners", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 125, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 4500000, "spotify_popularity": 55, "spotify_genres": ["Rock", "Latin"]}, {"name": "Fuerza Regida", "tier": "headliner", "genre": "Regional Mexican", "origin": "USA/Mexico", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "1.0M monthly listeners", "listener_number": 1.0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Regional Mexican"]}, {"name": "Don Toliver", "tier": "headliner", "genre": "Hip-Hop/R&B", "origin": "USA (TX)", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "47.0M monthly listeners", "listener_number": 47.0, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hot", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 47000000, "spotify_popularity": 85, "spotify_genres": ["Hip-Hop", "R&B"]}, {"name": "Junior H", "tier": "headliner", "genre": "Latin Trap/Hip-Hop", "origin": "USA/Mexico", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "💃 Dançante", "spotify_listeners": "30.7M monthly listeners", "listener_number": 30.7, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hot", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.78, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 30700000, "spotify_popularity": 85, "spotify_genres": ["Latin Trap", "Hip-Hop"]}, {"name": "BigXthaPlug", "tier": "headliner", "genre": "Hip-Hop/Rap", "origin": "USA (TX)", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "20.6M monthly listeners", "listener_number": 20.6, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hot", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 20600000, "spotify_popularity": 75, "spotify_genres": ["Hip-Hop", "Rap"]}, {"name": "Lola Young", "tier": "headliner", "genre": "Pop/Soul", "origin": "UK", "energy": "🌊 Chill", "mood": "😢 Melancólico", "danceability": "🎧 Ouvir", "spotify_listeners": "35.0M monthly listeners", "listener_number": 35.0, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": true, "category": "international", "spotify_audio_features": {"avg_energy": 0.35, "avg_valence": 0.25, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 35000000, "spotify_popularity": 85, "spotify_genres": ["Pop", "Soul"]}, {"name": "Mau P", "tier": "featured", "genre": "Electronic/House", "origin": "Netherlands", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "💃 Dançante", "spotify_listeners": "5.7M monthly listeners", "listener_number": 5.7, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "international", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.5, "avg_danceability": 0.9, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 5700000, "spotify_popularity": 65, "spotify_genres": ["Electronic", "House"]}, {"name": "Modeselektor", "tier": "featured", "genre": "Electronic/Experimental", "origin": "Germany", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "0.3M monthly listeners", "listener_number": 0.31339999999999996, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Electronic", "Experimental"]}, {"name": "DeVotchKa", "tier": "featured", "genre": "Indie/World", "origin": "USA", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "900.0M monthly listeners", "listener_number": 900.0, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hot", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 900000000, "spotify_popularity": 85, "spotify_genres": ["Indie", "World"]}, {"name": "Devin the Dude", "tier": "featured", "genre": "Hip-Hop", "origin": "USA (TX)", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Hip-Hop"]}, {"name": "Joshua Ray Walker", "tier": "featured", "genre": "Country/Americana", "origin": "USA (TX)", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "2026.0M+ monthly listeners", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 100, "avg_acousticness": 0.7, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Country", "Americana"]}, {"name": "Kaash Paige", "tier": "featured", "genre": "R&B/Hip-Hop", "origin": "USA (TX)", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "6.7M monthly listeners", "listener_number": 6.7, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 6700000, "spotify_popularity": 65, "spotify_genres": ["R&B", "Hip-Hop"]}, {"name": "OG Ron C", "tier": "featured", "genre": "Hip-Hop/DJ", "origin": "USA (TX)", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Hip-Hop", "DJ"]}, {"name": "Marissa Nadler", "tier": "featured", "genre": "Folk/Dream Pop", "origin": "USA", "energy": "🌊 Chill", "mood": "😢 Melancólico", "danceability": "🎧 Ouvir", "spotify_listeners": "0.1M monthly listeners", "listener_number": 0.0601, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.35, "avg_valence": 0.25, "avg_danceability": 0.45, "avg_tempo": 100, "avg_acousticness": 0.7, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Folk", "Dream Pop"]}, {"name": "Shallowater", "tier": "featured", "genre": "Electronic", "origin": "USA", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "0.1M monthly listeners", "listener_number": 0.059, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Electronic"]}, {"name": "The Tubs", "tier": "featured", "genre": "Indie Rock", "origin": "UK", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "0.0M monthly listeners", "listener_number": 0.0161, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 125, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Indie Rock"]}, {"name": "Jon Langford of Mekons", "tier": "featured", "genre": "Punk/Alt Country", "origin": "UK/USA", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 100, "avg_acousticness": 0.7, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Punk", "Alt Country"]}, {"name": "Kodie Shane", "tier": "featured", "genre": "Hip-Hop/Pop", "origin": "USA", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Hip-Hop", "Pop"]}, {"name": "Sassy 009", "tier": "wave2", "genre": "Electronic Pop", "origin": "Norway", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Electronic Pop"]}, {"name": "Hannah Cohen", "tier": "wave2", "genre": "Singer-Songwriter", "origin": "USA", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "0.8M monthly listeners", "listener_number": 1.0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.7, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Singer-Songwriter"]}, {"name": "Javiera Electra", "tier": "wave2", "genre": "Electronic/Latin", "origin": "Chile", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Electronic", "Latin"]}, {"name": "MARCO PLUS", "tier": "wave2", "genre": "Experimental", "origin": "USA", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "0.0M monthly listeners", "listener_number": 0.039, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Experimental"]}, {"name": "Oscar Ortiz", "tier": "wave2", "genre": "Regional Mexican", "origin": "Mexico", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "4.3M monthly listeners", "listener_number": 4.3, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "international", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 4300000, "spotify_popularity": 55, "spotify_genres": ["Regional Mexican"]}, {"name": "TTSSFU", "tier": "wave2", "genre": "Punk", "origin": "USA", "energy": "🔥 Up", "mood": "😤 Intenso", "danceability": "🎸 Show", "spotify_listeners": "0.2M monthly listeners", "listener_number": 0.1996, "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.85, "avg_valence": 0.5, "avg_danceability": 0.62, "avg_tempo": 125, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Punk"]}, {"name": "Deloyd Elze", "tier": "wave2", "genre": "R&B/Soul", "origin": "USA", "energy": "🌊 Chill", "mood": "😢 Melancólico", "danceability": "🎧 Ouvir", "spotify_listeners": "0.0M monthly listeners", "listener_number": 0.033, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.35, "avg_valence": 0.25, "avg_danceability": 0.45, "avg_tempo": 105, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["R&B", "Soul"]}, {"name": "DJ AG", "tier": "wave2", "genre": "DJ/Hip-Hop", "origin": "USA", "energy": "🔥 Up", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "spotify_listeners": "Not found", "listener_number": 0, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": false, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.75, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 95, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["DJ", "Hip-Hop"]}, {"name": "Electra Hernández", "tier": "wave2", "genre": "Latin/Electronic", "origin": "Mexico", "energy": "⚡ Médio", "mood": "😤 Intenso", "danceability": "🎧 Ouvir", "spotify_listeners": "0.0M monthly listeners", "listener_number": 0.015, "recent_momentum": "📄 New releases | 🔥 Viral momentum", "has_new_release": true, "is_viral": true, "is_international": true, "category": "hidden_gems", "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.5, "avg_danceability": 0.45, "avg_tempo": 128, "avg_acousticness": 0.15, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Latin", "Electronic"]}, {"name": "Adrian Activo", "tier": "local", "genre": "Latin/Alternative", "origin": "Austin, TX", "energy": "⚡ Médio", "mood": "😊 Alegre", "danceability": "🎧 Ouvir", "category": "local", "spotify_listeners": "Local - no API data", "listener_number": 0, "recent_momentum": "Austin local artist", "has_new_release": false, "is_viral": false, "is_international": false, "spotify_audio_features": {"avg_energy": 0.55, "avg_valence": 0.72, "avg_danceability": 0.45, "avg_tempo": 110, "avg_acousticness": 0.4, "track_count_analyzed": 8, "note": "Estimated from genre and mood metadata"}, "spotify_followers": 100000, "spotify_popularity": 45, "spotify_genres": ["Latin", "Alternative"]}];
+
+        // Translations
+        const translations = {
+            en: {
+                'subtitle': 'Discover your perfect SXSW soundtrack',
+                'chat-title': 'What\'s your vibe?',
+                'mood-label': 'Mood',
+                'mood-energetic': '⚡ Energetic',
+                'mood-chill': '🌊 Chill',
+                'mood-happy': '😊 Happy',
+                'mood-melancholic': '🌙 Melancholic',
+                'mood-intense': '🔥 Intense',
+                'mood-danceable': '💃 Danceable',
+                'moment-label': 'What\'s happening?',
+                'moment-warmup': '🎤 Pre-show warmup',
+                'moment-walking': '🚶 Walking around',
+                'moment-afterparty': '🎉 After party',
+                'moment-morning': '☕ Morning coffee',
+                'energy-label': 'Energy Level',
+                'genre-label': 'Preferred Genre',
+                'genre-any': 'Any Genre',
+                'btn-generate': 'Generate Recommendations',
+                'results-title': '🎧 Your Playlist',
+                'results-empty': '👈 Describe what you\'re looking for',
+                'playlists-title': '🎵 Curated SXSW Playlists',
+                'energy-boost-name': '🔥 SXSW Energy Boost',
+                'energy-boost-desc': 'High energy hits to pump you up',
+                'austin-chill-name': '🌊 Austin Chill',
+                'austin-chill-desc': 'Relaxed vibes with local flavor',
+                'dance-floor-name': '💃 Dance Floor Ready',
+                'dance-floor-desc': 'Maximum danceability on deck',
+                'feel-good-name': '😊 Feel Good SXSW',
+                'feel-good-desc': 'Happy, uplifting tracks',
+                'global-sounds-name': '🌍 Global Sounds',
+                'global-sounds-desc': 'International artists at SXSW',
+                'hidden-gems-name': '💎 Hidden Gems',
+                'hidden-gems-desc': 'Underground talent deserves love',
+            },
+            pt: {
+                'subtitle': 'Descubra sua trilha sonora SXSW perfeita',
+                'chat-title': 'Qual é sua vibe?',
+                'mood-label': 'Humor',
+                'mood-energetic': '⚡ Energético',
+                'mood-chill': '🌊 Tranquilo',
+                'mood-happy': '😊 Feliz',
+                'mood-melancholic': '🌙 Melancólico',
+                'mood-intense': '🔥 Intenso',
+                'mood-danceable': '💃 Dançante',
+                'moment-label': 'O que está acontecendo?',
+                'moment-warmup': '🎤 Aquecimento pré-show',
+                'moment-walking': '🚶 Passeando',
+                'moment-afterparty': '🎉 Festa após o show',
+                'moment-morning': '☕ Café da manhã',
+                'energy-label': 'Nível de Energia',
+                'genre-label': 'Gênero Preferido',
+                'genre-any': 'Qualquer Gênero',
+                'btn-generate': 'Gerar Recomendações',
+                'results-title': '🎧 Sua Playlist',
+                'results-empty': '👈 Descreva o que você procura',
+                'playlists-title': '🎵 Playlists SXSW Curadas',
+                'energy-boost-name': '🔥 Impulso de Energia SXSW',
+                'energy-boost-desc': 'Músicas de alta energia para bombear',
+                'austin-chill-name': '🌊 Austin Tranquilo',
+                'austin-chill-desc': 'Vibes relaxadas com sabor local',
+                'dance-floor-name': '💃 Pronto para Dançar',
+                'dance-floor-desc': 'Máxima dançabilidade em volta',
+                'feel-good-name': '😊 Sinta-se Bem SXSW',
+                'feel-good-desc': 'Faixas felizes e inspiradoras',
+                'global-sounds-name': '🌍 Sons Globais',
+                'global-sounds-desc': 'Artistas internacionais no SXSW',
+                'hidden-gems-name': '💎 Gemas Escondidas',
+                'hidden-gems-desc': 'Talentos underground merecem amor',
+            }
+        };
+
+        let currentLanguage = 'en';
+        let selectedMood = null;
+        let selectedMoment = null;
+        let selectedGenre = '';
+        let selectedEnergy = 50;
+
+        // Initialize
+        function init() {
+            renderPlaylistCards();
+            updateTranslations('en');
+        }
+
+        // Language switching
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            updateTranslations(lang);
+        }
+
+        function updateTranslations(lang) {
+            document.querySelectorAll('[data-text]').forEach(el => {
+                const key = el.getAttribute('data-text');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update select options
+            const options = document.querySelectorAll('option');
+            options.forEach(opt => {
+                const key = opt.getAttribute('data-text');
+                if (key && translations[lang][key]) {
+                    opt.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Mood selection
+        function selectMood(mood) {
+            document.querySelectorAll('.mood-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.mood-btn').classList.add('active');
+            selectedMood = mood;
+        }
+
+        // Moment selection
+        function selectMoment(moment) {
+            document.querySelectorAll('.moment-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.moment-btn').classList.add('active');
+            selectedMoment = moment;
+        }
+
+        // Energy slider
+        function updateEnergyValue() {
+            const value = parseInt(document.getElementById('energySlider').value);
+            selectedEnergy = value;
+            const labels = {
+                en: { low: 'Low', medium: 'Medium', high: 'High' },
+                pt: { low: 'Baixa', medium: 'Médio', high: 'Alta' }
+            };
+            let label = labels[currentLanguage].medium;
+            if (value < 33) label = labels[currentLanguage].low;
+            else if (value > 66) label = labels[currentLanguage].high;
+            document.getElementById('energyValue').textContent = label;
+        }
+
+        // Score matching algorithm
+        function scoreArtist(artist, mood, moment, energy, genre) {
+            const features = artist.spotify_audio_features;
+            let score = 50; // Base score
+
+            // Mood matching
+            if (mood === 'energetic') {
+                score += features.avg_energy * 30;
+                score += (features.avg_tempo > 120 ? 15 : 0);
+            } else if (mood === 'chill') {
+                score += (1 - features.avg_energy) * 30;
+                score += features.avg_acousticness * 15;
+            } else if (mood === 'happy') {
+                score += features.avg_valence * 30;
+            } else if (mood === 'melancholic') {
+                score += (1 - features.avg_valence) * 30;
+                score += (1 - features.avg_energy) * 15;
+            } else if (mood === 'intense') {
+                score += features.avg_energy * 30;
+                score += Math.abs(features.avg_valence - 0.5) * 15;
+            } else if (mood === 'danceable') {
+                score += features.avg_danceability * 35;
+            }
+
+            // Moment matching
+            if (moment === 'warmup') {
+                score += Math.abs(features.avg_energy - 0.6) < 0.15 ? 20 : 0;
+            } else if (moment === 'walking') {
+                score += (1 - Math.abs(features.avg_energy - 0.5)) * 15;
+            } else if (moment === 'afterparty') {
+                score += (features.avg_energy > 0.7 ? 20 : 0);
+                score += (features.avg_danceability > 0.6 ? 15 : 0);
+            } else if (moment === 'morning') {
+                score += (features.avg_energy < 0.4 ? 20 : 0);
+                score += (features.avg_acousticness > 0.5 ? 15 : 0);
+            }
+
+            // Energy level matching
+            const energyTarget = selectedEnergy / 100;
+            score += (1 - Math.abs(features.avg_energy - energyTarget)) * 20;
+
+            // Genre matching
+            if (genre && artist.genre) {
+                const genreMatch = artist.genre.toLowerCase().includes(genre.toLowerCase());
+                score += genreMatch ? 25 : -10;
+            }
+
+            // Popularity bonus
+            const popularityBonus = Math.min(artist.spotify_popularity || 0, 100) / 100 * 5;
+            score += popularityBonus;
+
+            return score;
+        }
+
+        // Generate playlist
+        function generatePlaylist() {
+            if (!selectedMood && !selectedMoment) {
+                alert('Please select a mood or moment');
+                return;
+            }
+
+            selectedGenre = document.getElementById('genreSelect').value;
+
+            const scored = artistsData.map(artist => ({
+                ...artist,
+                matchScore: scoreArtist(artist, selectedMood, selectedMoment, selectedEnergy, selectedGenre)
+            }));
+
+            const top = scored
+                .sort((a, b) => b.matchScore - a.matchScore)
+                .slice(0, 10);
+
+            renderResults(top);
+        }
+
+        // Render results
+        function renderResults(artists) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            if (artists.length === 0) {
+                resultsDiv.innerHTML = '<div class="empty-state"><div class="empty-state-icon">😔</div><p>No artists found. Try adjusting your preferences.</p></div>';
+                return;
+            }
+
+            artists.forEach(artist => {
+                const card = createArtistCard(artist);
+                resultsDiv.appendChild(card);
+            });
+        }
+
+        // Create artist card
+        function createArtistCard(artist) {
+            const card = document.createElement('div');
+            card.className = 'artist-card';
+
+            const features = artist.spotify_audio_features;
+            let tierClass = 'headliner';
+            let tierEmoji = '⭐';
+
+            if (artist.category === 'hot') {
+                tierClass = 'hot';
+                tierEmoji = '🔥';
+            } else if (artist.category === 'hidden_gems') {
+                tierClass = 'gem';
+                tierEmoji = '💎';
+            } else if (artist.category === 'local') {
+                tierClass = 'local';
+                tierEmoji = '🏠';
+            }
+
+            card.innerHTML = `
+                <div class="artist-header">
+                    <div>
+                        <div class="artist-name">${artist.name}</div>
+                        <div class="artist-meta">${artist.genre} • ${artist.origin}</div>
+                    </div>
+                    <div class="tier-badge ${tierClass}">${tierEmoji} ${artist.tier}</div>
+                </div>
+
+                <div class="feature-bars">
+                    <div class="feature-bar">
+                        <div class="feature-label">
+                            <span>Energy</span>
+                            <span>${(features.avg_energy * 100).toFixed(0)}%</span>
+                        </div>
+                        <div class="bar-background">
+                            <div class="bar-fill energy" style="width: ${features.avg_energy * 100}%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature-bar">
+                        <div class="feature-label">
+                            <span>Danceability</span>
+                            <span>${(features.avg_danceability * 100).toFixed(0)}%</span>
+                        </div>
+                        <div class="bar-background">
+                            <div class="bar-fill danceability" style="width: ${features.avg_danceability * 100}%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature-bar">
+                        <div class="feature-label">
+                            <span>Happiness</span>
+                            <span>${(features.avg_valence * 100).toFixed(0)}%</span>
+                        </div>
+                        <div class="bar-background">
+                            <div class="bar-fill valence" style="width: ${features.avg_valence * 100}%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artist-actions">
+                    <a href="https://open.spotify.com/search/${encodeURIComponent(artist.name)}" target="_blank" class="btn-spotify">
+                        🎵 Open on Spotify
+                    </a>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Pre-built playlists
+        function renderPlaylistCards() {
+            const playlistConfigs = [
+                {
+                    emoji: '🔥',
+                    key: 'energy-boost',
+                    filter: artist => artist.spotify_audio_features.avg_energy > 0.7
+                },
+                {
+                    emoji: '🌊',
+                    key: 'austin-chill',
+                    filter: artist => artist.spotify_audio_features.avg_energy < 0.4 && artist.spotify_audio_features.avg_acousticness > 0.4
+                },
+                {
+                    emoji: '💃',
+                    key: 'dance-floor',
+                    filter: artist => artist.spotify_audio_features.avg_danceability > 0.7
+                },
+                {
+                    emoji: '😊',
+                    key: 'feel-good',
+                    filter: artist => artist.spotify_audio_features.avg_valence > 0.7
+                },
+                {
+                    emoji: '🌍',
+                    key: 'global-sounds',
+                    filter: artist => artist.is_international
+                },
+                {
+                    emoji: '💎',
+                    key: 'hidden-gems',
+                    filter: artist => !artist.is_international && (artist.spotify_followers < 1000000 || artist.category === 'hidden_gems')
+                }
+            ];
+
+            const grid = document.getElementById('playlistsGrid');
+            grid.innerHTML = '';
+
+            playlistConfigs.forEach(config => {
+                const matching = artistsData.filter(config.filter);
+                const card = document.createElement('div');
+                card.className = 'playlist-card';
+                card.onclick = () => showPlaylistResults(config, matching);
+
+                const nameKey = `${config.key}-name`;
+                const descKey = `${config.key}-desc`;
+
+                card.innerHTML = `
+                    <div class="playlist-emoji">${config.emoji}</div>
+                    <div class="playlist-name" data-text="${nameKey}"></div>
+                    <div class="playlist-desc" data-text="${descKey}"></div>
+                    <div class="playlist-count">${matching.length} artists</div>
+                `;
+
+                grid.appendChild(card);
+
+                // Translate after creation
+                const nameEl = card.querySelector('[data-text="' + nameKey + '"]');
+                const descEl = card.querySelector('[data-text="' + descKey + '"]');
+                if (nameEl) nameEl.textContent = translations[currentLanguage][nameKey];
+                if (descEl) descEl.textContent = translations[currentLanguage][descKey];
+            });
+        }
+
+        // Show playlist results
+        function showPlaylistResults(config, artists) {
+            const sorted = artists.sort((a, b) => {
+                const scoreA = scoreArtist(a, null, null, 50, '');
+                const scoreB = scoreArtist(b, null, null, 50, '');
+                return scoreB - scoreA;
+            });
+
+            renderResults(sorted);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on load
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>
