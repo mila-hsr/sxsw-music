@@ -1,0 +1,990 @@
+{
+  "artists": [
+    {
+      "name": "The All-American Rejects",
+      "tier": "headliner",
+      "genre": "Pop Punk/Emo",
+      "origin": "USA",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "10.5M monthly listeners",
+      "listener_number": 10.5,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "headliners",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 125,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 10500000,
+      "spotify_popularity": 75,
+      "spotify_genres": [
+        "Pop Punk",
+        "Emo"
+      ]
+    },
+    {
+      "name": "Charley Crockett",
+      "tier": "headliner",
+      "genre": "Country/Americana",
+      "origin": "USA (TX)",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "1.5M monthly listeners",
+      "listener_number": 1.5,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 100,
+        "avg_acousticness": 0.7,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 1500000,
+      "spotify_popularity": 55,
+      "spotify_genres": [
+        "Country",
+        "Americana"
+      ]
+    },
+    {
+      "name": "Passion Pit",
+      "tier": "headliner",
+      "genre": "Indie Electronic",
+      "origin": "USA",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "3.6M monthly listeners",
+      "listener_number": 3.6,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 3600000,
+      "spotify_popularity": 55,
+      "spotify_genres": [
+        "Indie Electronic"
+      ]
+    },
+    {
+      "name": "Gogol Bordello",
+      "tier": "headliner",
+      "genre": "Punk Rock/Klezmer",
+      "origin": "USA/Ukraine",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 125,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Punk Rock",
+        "Klezmer"
+      ]
+    },
+    {
+      "name": "Los Lobos",
+      "tier": "headliner",
+      "genre": "Rock/Latin",
+      "origin": "USA (LA)",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "4.5M monthly listeners",
+      "listener_number": 4.5,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "headliners",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 125,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 4500000,
+      "spotify_popularity": 55,
+      "spotify_genres": [
+        "Rock",
+        "Latin"
+      ]
+    },
+    {
+      "name": "Fuerza Regida",
+      "tier": "headliner",
+      "genre": "Regional Mexican",
+      "origin": "USA/Mexico",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "1.0M monthly listeners",
+      "listener_number": 1,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Regional Mexican"
+      ]
+    },
+    {
+      "name": "Don Toliver",
+      "tier": "headliner",
+      "genre": "Hip-Hop/R&B",
+      "origin": "USA (TX)",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "47.0M monthly listeners",
+      "listener_number": 47,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hot",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 47000000,
+      "spotify_popularity": 85,
+      "spotify_genres": [
+        "Hip-Hop",
+        "R&B"
+      ]
+    },
+    {
+      "name": "Junior H",
+      "tier": "headliner",
+      "genre": "Latin Trap/Hip-Hop",
+      "origin": "USA/Mexico",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "💃 Dançante",
+      "spotify_listeners": "30.7M monthly listeners",
+      "listener_number": 30.7,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hot",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.78,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 30700000,
+      "spotify_popularity": 85,
+      "spotify_genres": [
+        "Latin Trap",
+        "Hip-Hop"
+      ]
+    },
+    {
+      "name": "BigXthaPlug",
+      "tier": "headliner",
+      "genre": "Hip-Hop/Rap",
+      "origin": "USA (TX)",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "20.6M monthly listeners",
+      "listener_number": 20.6,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hot",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 20600000,
+      "spotify_popularity": 75,
+      "spotify_genres": [
+        "Hip-Hop",
+        "Rap"
+      ]
+    },
+    {
+      "name": "Lola Young",
+      "tier": "headliner",
+      "genre": "Pop/Soul",
+      "origin": "UK",
+      "energy": "🌊 Chill",
+      "mood": "😢 Melancólico",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "35.0M monthly listeners",
+      "listener_number": 35,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "international",
+      "spotify_audio_features": {
+        "avg_energy": 0.35,
+        "avg_valence": 0.25,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 35000000,
+      "spotify_popularity": 85,
+      "spotify_genres": [
+        "Pop",
+        "Soul"
+      ]
+    },
+    {
+      "name": "Mau P",
+      "tier": "featured",
+      "genre": "Electronic/House",
+      "origin": "Netherlands",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "💃 Dançante",
+      "spotify_listeners": "5.7M monthly listeners",
+      "listener_number": 5.7,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "international",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.9,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 5700000,
+      "spotify_popularity": 65,
+      "spotify_genres": [
+        "Electronic",
+        "House"
+      ]
+    },
+    {
+      "name": "Modeselektor",
+      "tier": "featured",
+      "genre": "Electronic/Experimental",
+      "origin": "Germany",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.3M monthly listeners",
+      "listener_number": 0.31339999999999996,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Electronic",
+        "Experimental"
+      ]
+    },
+    {
+      "name": "DeVotchKa",
+      "tier": "featured",
+      "genre": "Indie/World",
+      "origin": "USA",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "900.0M monthly listeners",
+      "listener_number": 900,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hot",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 900000000,
+      "spotify_popularity": 85,
+      "spotify_genres": [
+        "Indie",
+        "World"
+      ]
+    },
+    {
+      "name": "Devin the Dude",
+      "tier": "featured",
+      "genre": "Hip-Hop",
+      "origin": "USA (TX)",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Hip-Hop"
+      ]
+    },
+    {
+      "name": "Joshua Ray Walker",
+      "tier": "featured",
+      "genre": "Country/Americana",
+      "origin": "USA (TX)",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "2026.0M+ monthly listeners",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 100,
+        "avg_acousticness": 0.7,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Country",
+        "Americana"
+      ]
+    },
+    {
+      "name": "Kaash Paige",
+      "tier": "featured",
+      "genre": "R&B/Hip-Hop",
+      "origin": "USA (TX)",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "6.7M monthly listeners",
+      "listener_number": 6.7,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 6700000,
+      "spotify_popularity": 65,
+      "spotify_genres": [
+        "R&B",
+        "Hip-Hop"
+      ]
+    },
+    {
+      "name": "OG Ron C",
+      "tier": "featured",
+      "genre": "Hip-Hop/DJ",
+      "origin": "USA (TX)",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Hip-Hop",
+        "DJ"
+      ]
+    },
+    {
+      "name": "Marissa Nadler",
+      "tier": "featured",
+      "genre": "Folk/Dream Pop",
+      "origin": "USA",
+      "energy": "🌊 Chill",
+      "mood": "😢 Melancólico",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.1M monthly listeners",
+      "listener_number": 0.0601,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.35,
+        "avg_valence": 0.25,
+        "avg_danceability": 0.45,
+        "avg_tempo": 100,
+        "avg_acousticness": 0.7,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Folk",
+        "Dream Pop"
+      ]
+    },
+    {
+      "name": "Shallowater",
+      "tier": "featured",
+      "genre": "Electronic",
+      "origin": "USA",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.1M monthly listeners",
+      "listener_number": 0.059,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Electronic"
+      ]
+    },
+    {
+      "name": "The Tubs",
+      "tier": "featured",
+      "genre": "Indie Rock",
+      "origin": "UK",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "0.0M monthly listeners",
+      "listener_number": 0.0161,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 125,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Indie Rock"
+      ]
+    },
+    {
+      "name": "Jon Langford of Mekons",
+      "tier": "featured",
+      "genre": "Punk/Alt Country",
+      "origin": "UK/USA",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 100,
+        "avg_acousticness": 0.7,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Punk",
+        "Alt Country"
+      ]
+    },
+    {
+      "name": "Kodie Shane",
+      "tier": "featured",
+      "genre": "Hip-Hop/Pop",
+      "origin": "USA",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Hip-Hop",
+        "Pop"
+      ]
+    },
+    {
+      "name": "Sassy 009",
+      "tier": "wave2",
+      "genre": "Electronic Pop",
+      "origin": "Norway",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Electronic Pop"
+      ]
+    },
+    {
+      "name": "Hannah Cohen",
+      "tier": "wave2",
+      "genre": "Singer-Songwriter",
+      "origin": "USA",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.8M monthly listeners",
+      "listener_number": 1,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.7,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Singer-Songwriter"
+      ]
+    },
+    {
+      "name": "Javiera Electra",
+      "tier": "wave2",
+      "genre": "Electronic/Latin",
+      "origin": "Chile",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Electronic",
+        "Latin"
+      ]
+    },
+    {
+      "name": "MARCO PLUS",
+      "tier": "wave2",
+      "genre": "Experimental",
+      "origin": "USA",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.0M monthly listeners",
+      "listener_number": 0.039,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Experimental"
+      ]
+    },
+    {
+      "name": "Oscar Ortiz",
+      "tier": "wave2",
+      "genre": "Regional Mexican",
+      "origin": "Mexico",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "4.3M monthly listeners",
+      "listener_number": 4.3,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "international",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 4300000,
+      "spotify_popularity": 55,
+      "spotify_genres": [
+        "Regional Mexican"
+      ]
+    },
+    {
+      "name": "TTSSFU",
+      "tier": "wave2",
+      "genre": "Punk",
+      "origin": "USA",
+      "energy": "🔥 Up",
+      "mood": "😤 Intenso",
+      "danceability": "🎸 Show",
+      "spotify_listeners": "0.2M monthly listeners",
+      "listener_number": 0.1996,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum | 🎤 Touring",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.85,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.62,
+        "avg_tempo": 125,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Punk"
+      ]
+    },
+    {
+      "name": "Deloyd Elze",
+      "tier": "wave2",
+      "genre": "R&B/Soul",
+      "origin": "USA",
+      "energy": "🌊 Chill",
+      "mood": "😢 Melancólico",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.0M monthly listeners",
+      "listener_number": 0.033,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.35,
+        "avg_valence": 0.25,
+        "avg_danceability": 0.45,
+        "avg_tempo": 105,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "R&B",
+        "Soul"
+      ]
+    },
+    {
+      "name": "DJ AG",
+      "tier": "wave2",
+      "genre": "DJ/Hip-Hop",
+      "origin": "USA",
+      "energy": "🔥 Up",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "Not found",
+      "listener_number": 0,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": false,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.75,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 95,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "DJ",
+        "Hip-Hop"
+      ]
+    },
+    {
+      "name": "Electra Hernández",
+      "tier": "wave2",
+      "genre": "Latin/Electronic",
+      "origin": "Mexico",
+      "energy": "⚡ Médio",
+      "mood": "😤 Intenso",
+      "danceability": "🎧 Ouvir",
+      "spotify_listeners": "0.0M monthly listeners",
+      "listener_number": 0.015,
+      "recent_momentum": "📄 New releases | 🔥 Viral momentum",
+      "has_new_release": true,
+      "is_viral": true,
+      "is_international": true,
+      "category": "hidden_gems",
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.5,
+        "avg_danceability": 0.45,
+        "avg_tempo": 128,
+        "avg_acousticness": 0.15,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Latin",
+        "Electronic"
+      ]
+    },
+    {
+      "name": "Adrian Activo",
+      "tier": "local",
+      "genre": "Latin/Alternative",
+      "origin": "Austin, TX",
+      "energy": "⚡ Médio",
+      "mood": "😊 Alegre",
+      "danceability": "🎧 Ouvir",
+      "category": "local",
+      "spotify_listeners": "Local - no API data",
+      "listener_number": 0,
+      "recent_momentum": "Austin local artist",
+      "has_new_release": false,
+      "is_viral": false,
+      "is_international": false,
+      "spotify_audio_features": {
+        "avg_energy": 0.55,
+        "avg_valence": 0.72,
+        "avg_danceability": 0.45,
+        "avg_tempo": 110,
+        "avg_acousticness": 0.4,
+        "track_count_analyzed": 8,
+        "note": "Estimated from genre and mood metadata"
+      },
+      "spotify_followers": 100000,
+      "spotify_popularity": 45,
+      "spotify_genres": [
+        "Latin",
+        "Alternative"
+      ]
+    }
+  ],
+  "total": 32,
+  "lastUpdated": "2026-03-05",
+  "source": "sxsw.md",
+  "description": "SXSW 2026 artists with audio features for agent consumption"
+}
