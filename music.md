@@ -2,23 +2,44 @@
 title: "SXSW 2026 Music — Playlist Recommender"
 description: "197 artists with Spotify audio features. Query by mood, energy, genre."
 type: music-recommender
-version: "1.0"
-date: 2026-03-04
+version: "1.1"
+date: 2026-03-05
 artists_count: 197
-human_url: "https://mila-hsr.github.io/sxsw-music/"
+data_url: "/music/artists.json"
+human_url: "https://sxsw.md/music"
+content_negotiation:
+  json: "/music/artists.json"
+  markdown: "/music?format=md"
+  html: "/music"
 ---
 
 # SXSW 2026 Music Playlist Recommender
 
-> **For agents**: Parse the structured data below. Each artist has Spotify audio features (0-1).
-> **For humans**: [Interactive recommender](https://mila-hsr.github.io/sxsw-music/)
+## How to use this data (for AI agents)
 
-## Query guide (agents)
-- Energetic: energy>0.7, tempo>120
-- Chill: energy<0.4, acousticness>0.4
-- Happy: valence>0.7
-- Melancholic: valence<0.3, energy<0.5
-- Danceable: danceability>0.7
+1. **Fetch** `/music/artists.json` for structured artist data
+2. **Filter** by audio features, genre, mood, or tier
+3. **Recommend** using `spotify_url` field (opens Spotify search for the artist)
+4. **Personalize** by asking the user their preferences and matching to audio features
+
+> Each artist has: name, genre, origin, tier, mood, energy, spotify_audio_features (avg_energy, avg_valence, avg_danceability, avg_tempo, avg_acousticness), spotify_popularity, spotify_url
+
+## Query guide
+- **Energetic**: energy>0.7, tempo>120
+- **Chill**: energy<0.4, acousticness>0.4
+- **Happy**: valence>0.7
+- **Melancholic**: valence<0.3, energy<0.5
+- **Danceable**: danceability>0.7
+- **Headliners**: tier="headliner"
+- **International**: is_international=true
+
+## Curated playlists (pre-built mood filters)
+- 🔥 **High Energy** — energy>0.7: party, festival, workout
+- 😌 **Chill Vibes** — energy<0.4, acousticness>0.4: relax, study
+- 💃 **Dance Floor** — danceability>0.7: clubs, dancing
+- 🌧️ **Melancholic** — valence<0.3: introspective, rainy day
+- 😊 **Feel Good** — valence>0.7: happy, upbeat
+- 🌍 **Global** — is_international=true: world music, diverse
 
 ## Full artist database
 
