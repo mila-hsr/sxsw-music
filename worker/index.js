@@ -1,12 +1,10 @@
-// SXSW Music Worker - Content Negotiation
-// Serves HTML, Markdown, or JSON based on Accept header / query params
-
-const ORIGIN = 'https://mila-hsr.github.io/sxsw-music/dist';
+// SXSW Music Worker - Content Negotiation with Workers Assets
+// Static files served via [assets] in wrangler.toml
+// This worker handles content negotiation for non-static requests
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
-    const path = url.pathname.replace(/\/+$/, '') || '/music';
 
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
@@ -14,11 +12,11 @@ export default {
     }
 
     // Direct file requests
-    if (path.endsWith('/artists.json') || url.searchParams.get('format') === 'json') {
-      return serve(`${ORIGIN}/artists.json`, 'application/json; charset=utf-8');
+    if (url.pathname.endsWith('/artists.json') || url.searchParams.get('format') === 'json') {
+      return serveAsset(env, '/artists.json', 'application/json; charset=utf-8');
     }
     if (url.searchParams.get('format') === 'md') {
-      return serve(`${ORIGIN}/index.md`, 'text/markdown; charset=utf-8');
+      return serveAsset(env, '/index.md', 'text/markdown; charset=utf-8');
     }
 
     // Content negotiation
@@ -27,19 +25,21 @@ export default {
     const isAgent = /curl|wget|python|httpie|bot|crawl/.test(ua);
 
     if (accept.includes('application/json')) {
-      return serve(`${ORIGIN}/artists.json`, 'application/json; charset=utf-8');
+      return serveAsset(env, '/artists.json', 'application/json; charset=utf-8');
     }
     if (accept.includes('text/markdown') || (isAgent && !accept.includes('text/html'))) {
-      return serve(`${ORIGIN}/index.md`, 'text/markdown; charset=utf-8');
+      return serveAsset(env, '/index.md', 'text/markdown; charset=utf-8');
     }
 
-    // Default: HTML
-    return serve(`${ORIGIN}/index.html`, 'text/html; charset=utf-8');
+    // Default: HTML (served automatically by Workers Assets for /)
+    return serveAsset(env, '/index.html', 'text/html; charset=utf-8');
   }
 };
 
-async function serve(url, contentType) {
-  const resp = await fetch(url);
+async function serveAsset(env, path, contentType) {
+  // Workers Assets binds to env.ASSETS
+  const assetUrl = new URL(path, 'https://placeholder.workers.dev');
+  const resp = await env.ASSETS.fetch(assetUrl);
   if (!resp.ok) {
     return new Response('Not found', { status: 404, headers: corsHeaders() });
   }
