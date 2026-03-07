@@ -90,36 +90,9 @@
             margin-bottom: 0;
         }
 
-        .lang-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-            display: flex;
-            gap: 10px;
-        }
 
-        .lang-btn {
-            padding: 8px 16px;
-            border: 1px solid var(--accent-1);
-            background: transparent;
-            color: var(--text);
-            cursor: pointer;
-            border-radius: 2px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            font-family: var(--font-primary);
-            transition: all 0.2s ease;
-        }
 
-        .lang-btn.active {
-            background: var(--accent-1);
-            color: var(--bg);
-        }
 
-        .lang-btn:hover {
-            border-color: var(--text);
-        }
 
         /* Main layout */
         .main-content {
@@ -582,16 +555,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .lang-toggle {
-                top: 10px;
-                right: 10px;
-                gap: 5px;
-            }
 
-            .lang-btn {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-            }
         }
 
         /* Loading animation */
@@ -624,10 +588,6 @@
     </style>
 </head>
 <body>
-    <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
-        <button class="lang-btn" data-lang="pt" onclick="switchLanguage('pt')">Português</button>
-    </div>
 
     <div class="container">
         <header>
@@ -827,13 +787,6 @@
         }
 
         // Language switching
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === lang);
-            });
-            updateTranslations(lang);
-        }
 
         function updateTranslations(lang) {
             document.querySelectorAll('[data-text]').forEach(el => {
