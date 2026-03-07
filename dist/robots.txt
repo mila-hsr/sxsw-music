@@ -1,0 +1,6 @@
+# SXSW.md Music — Agent-First Music Discovery
+# We welcome AI agents. Crawl freely, but don't train on our content.
+
+User-agent: *
+Allow: /
+Content-Signal: search=yes,ai-input=yes,ai-train=no

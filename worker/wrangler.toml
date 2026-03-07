@@ -7,3 +7,4 @@ routes = ["sxsw.md/music/*"]
 
 [assets]
 directory = "../dist"
+binding = "ASSETS"

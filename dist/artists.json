@@ -29,8 +29,7 @@
       "spotify_genres": [
         "Pop Punk",
         "Emo"
-      ],
-      "spotify_url": "https://open.spotify.com/search/The%20All-American%20Rejects"
+      ]
     },
     {
       "name": "Charley Crockett",
@@ -61,8 +60,7 @@
       "spotify_genres": [
         "Country",
         "Americana"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Charley%20Crockett"
+      ]
     },
     {
       "name": "Passion Pit",
@@ -92,8 +90,7 @@
       "spotify_popularity": 55,
       "spotify_genres": [
         "Indie Electronic"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Passion%20Pit"
+      ]
     },
     {
       "name": "Gogol Bordello",
@@ -124,8 +121,7 @@
       "spotify_genres": [
         "Punk Rock",
         "Klezmer"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Gogol%20Bordello"
+      ]
     },
     {
       "name": "Los Lobos",
@@ -156,8 +152,7 @@
       "spotify_genres": [
         "Rock",
         "Latin"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Los%20Lobos"
+      ]
     },
     {
       "name": "Fuerza Regida",
@@ -187,8 +182,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Regional Mexican"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Fuerza%20Regida"
+      ]
     },
     {
       "name": "Don Toliver",
@@ -219,8 +213,7 @@
       "spotify_genres": [
         "Hip-Hop",
         "R&B"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Don%20Toliver"
+      ]
     },
     {
       "name": "Junior H",
@@ -251,8 +244,7 @@
       "spotify_genres": [
         "Latin Trap",
         "Hip-Hop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Junior%20H"
+      ]
     },
     {
       "name": "BigXthaPlug",
@@ -283,8 +275,7 @@
       "spotify_genres": [
         "Hip-Hop",
         "Rap"
-      ],
-      "spotify_url": "https://open.spotify.com/search/BigXthaPlug"
+      ]
     },
     {
       "name": "Lola Young",
@@ -315,8 +306,7 @@
       "spotify_genres": [
         "Pop",
         "Soul"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Lola%20Young"
+      ]
     },
     {
       "name": "Mau P",
@@ -347,8 +337,7 @@
       "spotify_genres": [
         "Electronic",
         "House"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Mau%20P"
+      ]
     },
     {
       "name": "Modeselektor",
@@ -379,8 +368,7 @@
       "spotify_genres": [
         "Electronic",
         "Experimental"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Modeselektor"
+      ]
     },
     {
       "name": "DeVotchKa",
@@ -411,8 +399,7 @@
       "spotify_genres": [
         "Indie",
         "World"
-      ],
-      "spotify_url": "https://open.spotify.com/search/DeVotchKa"
+      ]
     },
     {
       "name": "Devin the Dude",
@@ -442,8 +429,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Hip-Hop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Devin%20the%20Dude"
+      ]
     },
     {
       "name": "Joshua Ray Walker",
@@ -474,8 +460,7 @@
       "spotify_genres": [
         "Country",
         "Americana"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Joshua%20Ray%20Walker"
+      ]
     },
     {
       "name": "Kaash Paige",
@@ -506,8 +491,7 @@
       "spotify_genres": [
         "R&B",
         "Hip-Hop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Kaash%20Paige"
+      ]
     },
     {
       "name": "OG Ron C",
@@ -538,8 +522,7 @@
       "spotify_genres": [
         "Hip-Hop",
         "DJ"
-      ],
-      "spotify_url": "https://open.spotify.com/search/OG%20Ron%20C"
+      ]
     },
     {
       "name": "Marissa Nadler",
@@ -570,8 +553,7 @@
       "spotify_genres": [
         "Folk",
         "Dream Pop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Marissa%20Nadler"
+      ]
     },
     {
       "name": "Shallowater",
@@ -601,8 +583,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Electronic"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Shallowater"
+      ]
     },
     {
       "name": "The Tubs",
@@ -632,8 +613,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Indie Rock"
-      ],
-      "spotify_url": "https://open.spotify.com/search/The%20Tubs"
+      ]
     },
     {
       "name": "Jon Langford of Mekons",
@@ -664,8 +644,7 @@
       "spotify_genres": [
         "Punk",
         "Alt Country"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Jon%20Langford%20of%20Mekons"
+      ]
     },
     {
       "name": "Kodie Shane",
@@ -696,8 +675,7 @@
       "spotify_genres": [
         "Hip-Hop",
         "Pop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Kodie%20Shane"
+      ]
     },
     {
       "name": "Sassy 009",
@@ -727,8 +705,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Electronic Pop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Sassy%20009"
+      ]
     },
     {
       "name": "Hannah Cohen",
@@ -758,8 +735,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Singer-Songwriter"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Hannah%20Cohen"
+      ]
     },
     {
       "name": "Javiera Electra",
@@ -790,8 +766,7 @@
       "spotify_genres": [
         "Electronic",
         "Latin"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Javiera%20Electra"
+      ]
     },
     {
       "name": "MARCO PLUS",
@@ -821,8 +796,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Experimental"
-      ],
-      "spotify_url": "https://open.spotify.com/search/MARCO%20PLUS"
+      ]
     },
     {
       "name": "Oscar Ortiz",
@@ -852,8 +826,7 @@
       "spotify_popularity": 55,
       "spotify_genres": [
         "Regional Mexican"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Oscar%20Ortiz"
+      ]
     },
     {
       "name": "TTSSFU",
@@ -883,8 +856,7 @@
       "spotify_popularity": 45,
       "spotify_genres": [
         "Punk"
-      ],
-      "spotify_url": "https://open.spotify.com/search/TTSSFU"
+      ]
     },
     {
       "name": "Deloyd Elze",
@@ -915,8 +887,7 @@
       "spotify_genres": [
         "R&B",
         "Soul"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Deloyd%20Elze"
+      ]
     },
     {
       "name": "DJ AG",
@@ -947,8 +918,7 @@
       "spotify_genres": [
         "DJ",
         "Hip-Hop"
-      ],
-      "spotify_url": "https://open.spotify.com/search/DJ%20AG"
+      ]
     },
     {
       "name": "Electra Hernández",
@@ -979,8 +949,7 @@
       "spotify_genres": [
         "Latin",
         "Electronic"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Electra%20Hernández"
+      ]
     },
     {
       "name": "Adrian Activo",
@@ -1011,8 +980,7 @@
       "spotify_genres": [
         "Latin",
         "Alternative"
-      ],
-      "spotify_url": "https://open.spotify.com/search/Adrian%20Activo"
+      ]
     }
   ],
   "total": 32,

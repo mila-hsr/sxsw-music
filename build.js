@@ -113,7 +113,7 @@ const navHtml = `
         <a href="https://sxsw.md/" style="color:#888;text-decoration:none;font-size:0.9rem;">News</a>
         <a href="https://sxsw.md/sessions" style="color:#888;text-decoration:none;font-size:0.9rem;">Sessions</a>
         <a href="https://sxsw.md/music" style="color:#f5f5f0;text-decoration:none;font-size:0.9rem;border-bottom:2px solid #c8ff00;padding-bottom:2px;">Music</a>
-        <a href="https://github.com/johnjohn-aic/sxsw-md" style="color:#888;text-decoration:none;font-size:0.9rem;margin-left:auto;" target="_blank">Repo</a>
+        <a href="https://sxsw.md/nexus" style="color:#888;text-decoration:none;font-size:0.9rem;margin-left:auto;">Nexus</a>
     </nav>`;
 distHtml = distHtml.replace('<body>', '<body>' + navHtml);
 
@@ -125,7 +125,7 @@ const footerHtml = `
             <span style="margin:0 8px;">·</span>
             <span>Unofficial SXSW 2026 Guide</span>
         </div>
-        <div>Made with data & good vibes · <a href="https://github.com/johnjohn-aic/sxsw-md" style="color:#ff6b35;text-decoration:none;" target="_blank">Open Source</a></div>
+        <div>Made with data &amp; good vibes</div>
     </footer>`;
 distHtml = distHtml.replace('</body>', footerHtml + '\n</body>');
 

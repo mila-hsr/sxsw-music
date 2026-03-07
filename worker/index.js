@@ -31,19 +31,22 @@ export default {
       return serveAsset(env, '/index.md', 'text/markdown; charset=utf-8');
     }
 
-    // Default: HTML (served automatically by Workers Assets for /)
-    return serveAsset(env, '/index.html', 'text/html; charset=utf-8');
+    // Default: HTML (rewrite relative paths to absolute /music/ paths)
+    return serveAsset(env, '/index.html', 'text/html; charset=utf-8', true);
   }
 };
 
-async function serveAsset(env, path, contentType) {
+async function serveAsset(env, path, contentType, rewritePaths = false) {
   // Workers Assets binds to env.ASSETS
   const assetUrl = new URL(path, 'https://placeholder.workers.dev');
   const resp = await env.ASSETS.fetch(assetUrl);
   if (!resp.ok) {
     return new Response('Not found', { status: 404, headers: corsHeaders() });
   }
-  const body = await resp.text();
+  let body = await resp.text();
+  if (rewritePaths) {
+    body = body.replace(/fetch\(['"]\.\/artists\.json['"]\)/g, "fetch('/music/artists.json')");
+  }
   return new Response(body, {
     headers: {
       'Content-Type': contentType,
