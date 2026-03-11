@@ -121,7 +121,7 @@ const navHtml = `
         <ul class="nav-links">
             <li><a href="https://sxsw.md/news">News</a></li>
             <li><a href="https://sxsw.md/sessions">Sessions</a></li>
-            <li><a href="https://sxsw.md/activations">Activations</a></li>
+            <li><a href="https://sxsw.md/activations">Events</a></li>
             <li><a href="https://sxsw.md/music" class="active">Music</a></li>
             <li><a href="https://sxsw.md/nexus">Nexus</a></li>
         </ul>
