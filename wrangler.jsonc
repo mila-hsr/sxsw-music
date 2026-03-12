@@ -1,14 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "sxsw-music",
-  "compatibility_date": "2025-09-27",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-03-01",
   "observability": {
     "enabled": true
   },
-  "assets": {
-    "directory": "."
-  },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  }
 }
