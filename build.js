@@ -200,4 +200,15 @@ const scheduleHtml = fs.readFileSync(path.join(__dirname, 'schedule.html'), 'utf
 fs.writeFileSync(path.join(scheduleDistDir, 'index.html'), scheduleHtml);
 console.log('✓ dist/schedule/index.html');
 
+// ── 7. Copy data files (venues, etc.) ──
+const dataDir = path.join(__dirname, 'data');
+const distDataDir = path.join(distDir, 'data');
+if (fs.existsSync(dataDir)) {
+  if (!fs.existsSync(distDataDir)) fs.mkdirSync(distDataDir, { recursive: true });
+  for (const f of fs.readdirSync(dataDir)) {
+    fs.copyFileSync(path.join(dataDir, f), path.join(distDataDir, f));
+  }
+  console.log('✓ dist/data/ (venues)');
+}
+
 console.log('\nBuild complete!');

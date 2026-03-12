@@ -337,6 +337,24 @@ body::after {
   font-size: 0.72rem;
   color: var(--muted);
   margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.set-venue a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.set-venue a:hover { color: var(--accent-1); }
+.venue-addr {
+  color: #555;
+  font-size: 0.65rem;
+}
+.venue-addr::before {
+  content: '·';
+  margin-right: 4px;
 }
 .mini-features {
   display: flex;
@@ -582,6 +600,8 @@ let weekData = null;
 let currentDayData = null;
 let currentDayKey = null;
 let activeBlock = 'all';
+let venueMap = {}; // variant name → venue data
+const base = location.pathname.startsWith('/music') ? '/music' : ''; // /music when proxied via sxsw.md
 
 const BLOCK_COLORS = {
   daytime: '#7ec8e3',
@@ -610,7 +630,18 @@ const DAY_DATES = ['2026-03-12','2026-03-13','2026-03-14','2026-03-15','2026-03-
 // ── Init ──
 async function init() {
   try {
-    const resp = await fetch('./schedule/index.json');
+    // Load venues data
+    try {
+      const vResp = await fetch(`${base}/data/venues.json`);
+      const vData = await vResp.json();
+      for (const v of Object.values(vData.venues)) {
+        for (const variant of v.variants) {
+          venueMap[variant] = v;
+        }
+      }
+    } catch(e) { console.warn('Venues data not available:', e); }
+
+    const resp = await fetch(`${base}/schedule/index.json`);
     weekData = await resp.json();
     renderWeekGrid();
 
@@ -661,7 +692,7 @@ async function selectDay(date) {
   document.getElementById('scheduleContent').innerHTML = '<div class="loading"><span class="loading-dot">Loading...</span></div>';
 
   try {
-    const resp = await fetch(`./schedule/${date}.json`);
+    const resp = await fetch(`${base}/schedule/${date}.json`);
     currentDayData = await resp.json();
     currentDayKey = DAY_KEYS[DAY_DATES.indexOf(date)];
     activeBlock = 'all';
@@ -706,7 +737,11 @@ function renderDaySchedule() {
   // Venue filter
   const venueSelect = document.getElementById('venueFilter');
   venueSelect.innerHTML = '<option value="">All venues</option>' +
-    d.venues.map(v => `<option>${v}</option>`).join('');
+    d.venues.map(v => {
+      const vi = venueMap[v];
+      const addr = vi && vi.address ? ' — ' + vi.address.replace(/, Austin.*$/, '') : '';
+      return `<option value="${v}">${v}${addr}</option>`;
+    }).join('');
 
   // Clear search
   document.getElementById('searchInput').value = '';
@@ -774,7 +809,13 @@ function renderScheduleContent() {
       }
 
       html += `</div>`; // .set-top
-      html += `<div class="set-venue">${s.venue}</div>`;
+      const venueInfo = venueMap[s.venue];
+      if (venueInfo && venueInfo.google_maps_url) {
+        const addr = venueInfo.address ? `<span class="venue-addr">${venueInfo.address.replace(/, Austin.*$/, '')}</span>` : '';
+        html += `<div class="set-venue"><a href="${venueInfo.google_maps_url}" target="_blank" rel="noopener" title="Open in Google Maps">&#x1f4cd; ${s.venue}</a>${addr}</div>`;
+      } else {
+        html += `<div class="set-venue">${s.venue}</div>`;
+      }
 
       if (s.audio) {
         const barColor = isHeadliner ? 'var(--accent-2)' : 'var(--accent-1)';
@@ -790,6 +831,9 @@ function renderScheduleContent() {
       html += `<span class="set-time">${s.start || ''}</span>`;
       html += `<div class="set-actions">`;
       html += `<a class="btn-sm" href="https://open.spotify.com/search/${encodeURIComponent(s.artist)}" target="_blank" rel="noopener">Spotify</a>`;
+      if (venueInfo && venueInfo.google_maps_url) {
+        html += `<a class="btn-sm" href="${venueInfo.google_maps_url}" target="_blank" rel="noopener" title="${venueInfo.address || s.venue}">Maps</a>`;
+      }
 
       if (isFeatured && s.genre) {
         const genreSlug = s.genre.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
