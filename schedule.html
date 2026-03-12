@@ -692,10 +692,9 @@ function renderDaySchedule() {
   const pdfFile = `sxsw2026-music-${currentDayKey}.pdf`;
   document.getElementById('actionBar').innerHTML = `
     <div class="action-card">
-      <span class="ac-text"><strong>Download</strong> — PDF or JSON</span>
+      <span class="ac-text"><strong>Download</strong> — Full day schedule</span>
       <div style="display:flex;gap:6px;">
         <a class="btn-action" href="${PDF_BASE}${pdfFile}" target="_blank">PDF</a>
-        <a class="btn-action orange" href="./schedule/${d.date}.json" target="_blank">JSON</a>
       </div>
     </div>
     <div class="action-card" style="border-color:var(--accent-2);">
