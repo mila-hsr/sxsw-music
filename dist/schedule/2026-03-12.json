@@ -1,0 +1,1737 @@
+{
+  "date": "2026-03-12",
+  "day": "Thursday",
+  "short": "Thu Mar 12",
+  "total_acts": 273,
+  "total_venues": 44,
+  "time_blocks": {
+    "daytime": {
+      "range": "9a – 11:30a",
+      "acts": 6
+    },
+    "afternoon": {
+      "range": "12p – 4:30p",
+      "acts": 43
+    },
+    "evening": {
+      "range": "5p – 8:30p",
+      "acts": 97
+    },
+    "late_night": {
+      "range": "9p – 1:30a",
+      "acts": 140
+    }
+  },
+  "venues": [
+    "809 E. 8th St",
+    "Augustine",
+    "Breakaway Records",
+    "Brushy Street Commons",
+    "Central Presbyterian Church",
+    "Cheer Up Charlies",
+    "Chess Club",
+    "Continental Club",
+    "Delilah's Front Porch",
+    "Elysium",
+    "Flamingo Cantina",
+    "Global Stage @ Downright Austin Backyard",
+    "Hilton Grand Ballroom (Salon HJK)",
+    "Hotel Vegas",
+    "Kingdom",
+    "Las Perlas",
+    "Lefty’s Brick Bar",
+    "Low Down Lounge",
+    "Mala Fama Rooftop",
+    "Marlow",
+    "Meanwhile Brewing",
+    "Mohawk Indoor",
+    "Mohawk Outdoor",
+    "Moody Theater",
+    "Nivel @ Mala Fama",
+    "Palm Door",
+    "Palm Door Patio",
+    "Riviere",
+    "Saxon Pub",
+    "Scholz Garten",
+    "Shangri-La",
+    "Stubb’s",
+    "Swan Dive",
+    "Swan Dive Patio",
+    "The 13th Floor",
+    "The Liberty",
+    "The Lucky Duck",
+    "Valhalla",
+    "Venue 6",
+    "Wanderlust Wine Co.",
+    "Waterloo Records",
+    "Webberville Food Truck Park",
+    "Yeti Flagship",
+    "Zilker Brewing"
+  ],
+  "schedule": [
+    {
+      "time": "9a",
+      "block": "daytime",
+      "sets": [
+        {
+          "artist": "JUSTAGURL",
+          "venue": "Kingdom",
+          "start": "2"
+        },
+        {
+          "artist": "Eric McEntee",
+          "venue": "Scholz Garten",
+          "start": "9"
+        }
+      ]
+    },
+    {
+      "time": "9:30a",
+      "block": "daytime",
+      "sets": [
+        {
+          "artist": "JOTP B2B Jordan M Boudreau",
+          "venue": "Kingdom",
+          "start": "3"
+        },
+        {
+          "artist": "Quentin",
+          "venue": "Scholz Garten",
+          "start": "8"
+        }
+      ]
+    },
+    {
+      "time": "10a",
+      "block": "daytime",
+      "sets": [
+        {
+          "artist": "Honey I'm Home",
+          "venue": "Scholz Garten",
+          "start": "10"
+        }
+      ]
+    },
+    {
+      "time": "11a",
+      "block": "daytime",
+      "sets": [
+        {
+          "artist": "Adult Leisure",
+          "venue": "Scholz Garten",
+          "start": "11"
+        }
+      ]
+    },
+    {
+      "time": "12p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Almost Heaven",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Leo Napoleon",
+          "venue": "Webberville Food Truck Park",
+          "start": "12"
+        }
+      ]
+    },
+    {
+      "time": "12:30p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Congratulations",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Les Itinérantes",
+          "venue": "Hilton Grand Ballroom (Salon HJK)",
+          "start": "12:45"
+        }
+      ]
+    },
+    {
+      "time": "1p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Twink Death",
+          "venue": "Brushy Street Commons",
+          "start": "1"
+        },
+        {
+          "artist": "Night Ritualz",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Aubrie Sellers",
+          "venue": "Waterloo Records",
+          "start": "1"
+        },
+        {
+          "artist": "Redbud",
+          "venue": "Webberville Food Truck Park",
+          "start": "1"
+        },
+        {
+          "artist": "Datura",
+          "venue": "Yeti Flagship",
+          "start": "1"
+        }
+      ]
+    },
+    {
+      "time": "1:30p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Sittin Sideways",
+          "venue": "Brushy Street Commons",
+          "start": "1:30"
+        },
+        {
+          "artist": "CDSM",
+          "venue": "Cheer Up Charlies",
+          "start": "1:50"
+        },
+        {
+          "artist": "The Tullamarines",
+          "venue": "Yeti Flagship",
+          "start": "1:50"
+        }
+      ]
+    },
+    {
+      "time": "2p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Banged Out",
+          "venue": "Brushy Street Commons",
+          "start": "2"
+        },
+        {
+          "artist": "Lauren Lakis",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Shared Walls",
+          "venue": "Delilah's Front Porch",
+          "start": "2"
+        },
+        {
+          "artist": "Amplified Heat",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "DD IIsland",
+          "venue": "Webberville Food Truck Park",
+          "start": "2"
+        }
+      ]
+    },
+    {
+      "time": "2:30p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Touch Girl Apple Blossom",
+          "venue": "Brushy Street Commons",
+          "start": "2:30"
+        },
+        {
+          "artist": "Turbo Goth",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Fried Awake",
+          "venue": "Delilah's Front Porch",
+          "start": "2:45"
+        },
+        {
+          "artist": "American Sharks",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Avery Cochrane",
+          "venue": "Yeti Flagship",
+          "start": "2:40"
+        }
+      ]
+    },
+    {
+      "time": "3p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Bubba Lucky",
+          "venue": "Breakaway Records",
+          "start": "3"
+        },
+        {
+          "artist": "Sanity Slip",
+          "venue": "Brushy Street Commons",
+          "start": "3"
+        },
+        {
+          "artist": "Pink Breath of Heaven",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Orión García",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Haylie Davis",
+          "venue": "Waterloo Records",
+          "start": "3"
+        },
+        {
+          "artist": "Forty Feet Tall",
+          "venue": "Webberville Food Truck Park",
+          "start": "3"
+        }
+      ]
+    },
+    {
+      "time": "3:30p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Mugger",
+          "venue": "Brushy Street Commons",
+          "start": "3:30"
+        },
+        {
+          "artist": "Stalefish",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Lazy Comet",
+          "venue": "Delilah's Front Porch",
+          "start": "3:30"
+        },
+        {
+          "artist": "Osees",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Easy Honey",
+          "venue": "Yeti Flagship",
+          "start": "3:30"
+        }
+      ]
+    },
+    {
+      "time": "4p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "TV Buddha",
+          "venue": "Breakaway Records",
+          "start": "4"
+        },
+        {
+          "artist": "Empty Shell Casing",
+          "venue": "Brushy Street Commons",
+          "start": "4"
+        },
+        {
+          "artist": "French Film",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Bad Acid",
+          "venue": "Delilah's Front Porch",
+          "start": "4:15"
+        },
+        {
+          "artist": "Holy Wave",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Jeremy Parsons",
+          "venue": "The Lucky Duck",
+          "start": "4"
+        },
+        {
+          "artist": "Ella Ion",
+          "venue": "Webberville Food Truck Park",
+          "start": "4"
+        },
+        {
+          "artist": "The Sophs",
+          "venue": "Yeti Flagship",
+          "start": "4:20"
+        }
+      ]
+    },
+    {
+      "time": "4:30p",
+      "block": "afternoon",
+      "sets": [
+        {
+          "artist": "Glaze",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Bad Lovers",
+          "venue": "Hotel Vegas",
+          "start": null
+        }
+      ]
+    },
+    {
+      "time": "5p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "CDSM",
+          "venue": "Breakaway Records",
+          "start": "5"
+        },
+        {
+          "artist": "Feet",
+          "venue": "Cheer Up Charlies",
+          "start": null
+        },
+        {
+          "artist": "Celestina Gravely",
+          "venue": "Delilah's Front Porch",
+          "start": "5"
+        },
+        {
+          "artist": "DJ AG",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "5",
+          "featured": true,
+          "tier": "wave2",
+          "genre": "DJ/Hip-Hop",
+          "audio": {
+            "energy": 0.75,
+            "danceability": 0.45,
+            "valence": 0.72
+          }
+        },
+        {
+          "artist": "Ulovei",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Ian Ward",
+          "venue": "The Lucky Duck",
+          "start": "5"
+        },
+        {
+          "artist": "Scott Ballew",
+          "venue": "Waterloo Records",
+          "start": "5"
+        },
+        {
+          "artist": "Enfants",
+          "venue": "Webberville Food Truck Park",
+          "start": "5"
+        },
+        {
+          "artist": "Timmy Skelly",
+          "venue": "Yeti Flagship",
+          "start": "5:20"
+        }
+      ]
+    },
+    {
+      "time": "5:30p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "DEDNAMEZ",
+          "venue": "Delilah's Front Porch",
+          "start": "5:45"
+        },
+        {
+          "artist": "King Louie",
+          "venue": "Hotel Vegas",
+          "start": null
+        }
+      ]
+    },
+    {
+      "time": "6p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Surfbort",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Little Guilt",
+          "venue": "Meanwhile Brewing",
+          "start": "6"
+        },
+        {
+          "artist": "Cinema Hearts",
+          "venue": "The Lucky Duck",
+          "start": "6"
+        },
+        {
+          "artist": "Stalefish",
+          "venue": "Webberville Food Truck Park",
+          "start": "6"
+        },
+        {
+          "artist": "Meek",
+          "venue": "Yeti Flagship",
+          "start": "6:10"
+        }
+      ]
+    },
+    {
+      "time": "6:30p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Burning Low",
+          "venue": "Delilah's Front Porch",
+          "start": "6:30"
+        },
+        {
+          "artist": "Tear Dungeon",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Susannah Joffe",
+          "venue": "Moody Theater",
+          "start": "6:30"
+        }
+      ]
+    },
+    {
+      "time": "7p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Almost Heaven",
+          "venue": "809 E. 8th St",
+          "start": null
+        },
+        {
+          "artist": "Worship Music DJs",
+          "venue": "Brushy Street Commons",
+          "start": "7"
+        },
+        {
+          "artist": "gustave ochoa",
+          "venue": "Central Presbyterian Church",
+          "start": "7"
+        },
+        {
+          "artist": "Glamorama",
+          "venue": "Chess Club",
+          "start": "7"
+        },
+        {
+          "artist": "Mikky and the Doom",
+          "venue": "Delilah's Front Porch",
+          "start": "7:15"
+        },
+        {
+          "artist": "Sibby Liv",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "7"
+        },
+        {
+          "artist": "Magic Rockers of Texas",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "GAS CREW",
+          "venue": "Kingdom",
+          "start": "7"
+        },
+        {
+          "artist": "Gummy Fang",
+          "venue": "Lefty’s Brick Bar",
+          "start": "7"
+        },
+        {
+          "artist": "Ancient Greece",
+          "venue": "Low Down Lounge",
+          "start": "7"
+        },
+        {
+          "artist": "Wilby",
+          "venue": "Meanwhile Brewing",
+          "start": "7"
+        },
+        {
+          "artist": "grima",
+          "venue": "Shangri-La",
+          "start": "7"
+        },
+        {
+          "artist": "Grandmas House",
+          "venue": "Stubb’s",
+          "start": "7"
+        },
+        {
+          "artist": "Bershy",
+          "venue": "Swan Dive",
+          "start": "7:15"
+        },
+        {
+          "artist": "Mutant Babies",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Foliage",
+          "venue": "The Lucky Duck",
+          "start": "7"
+        },
+        {
+          "artist": "Caleb De Casper",
+          "venue": "Valhalla",
+          "start": "7"
+        },
+        {
+          "artist": "Grace Sorensen",
+          "venue": "Zilker Brewing",
+          "start": "7"
+        }
+      ]
+    },
+    {
+      "time": "7:30p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Killboy",
+          "venue": "809 E. 8th St",
+          "start": null
+        },
+        {
+          "artist": "Sam LLanes",
+          "venue": "Brushy Street Commons",
+          "start": "7:30"
+        },
+        {
+          "artist": "Jamie Dred",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "7:30"
+        },
+        {
+          "artist": "Queen Serene",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Jessie Chambers",
+          "venue": "Las Perlas",
+          "start": "7:30"
+        },
+        {
+          "artist": "Tipa Tipo",
+          "venue": "Mohawk Indoor",
+          "start": "7:30"
+        },
+        {
+          "artist": "Saint Harison",
+          "venue": "Moody Theater",
+          "start": "7:30"
+        },
+        {
+          "artist": "Vin Zeal",
+          "venue": "Nivel @ Mala Fama",
+          "start": "7:30"
+        },
+        {
+          "artist": "I See Orange",
+          "venue": "Shangri-La",
+          "start": "7:50"
+        },
+        {
+          "artist": "Kiki Ambrose",
+          "venue": "Swan Dive Patio",
+          "start": "7:30"
+        },
+        {
+          "artist": "39th Gate of Hell",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Next of Kin",
+          "venue": "Zilker Brewing",
+          "start": "7:45"
+        }
+      ]
+    },
+    {
+      "time": "8p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Heavy Velvet",
+          "venue": "809 E. 8th St",
+          "start": null
+        },
+        {
+          "artist": "Petrina DeLacey",
+          "venue": "Brushy Street Commons",
+          "start": "7:45"
+        },
+        {
+          "artist": "Simone Tang",
+          "venue": "Central Presbyterian Church",
+          "start": "8"
+        },
+        {
+          "artist": "Astralorp",
+          "venue": "Chess Club",
+          "start": "8"
+        },
+        {
+          "artist": "Saige Davis",
+          "venue": "Continental Club",
+          "start": "8"
+        },
+        {
+          "artist": "Wavy Eye",
+          "venue": "Delilah's Front Porch",
+          "start": "8"
+        },
+        {
+          "artist": "Zastava",
+          "venue": "Elysium",
+          "start": "8"
+        },
+        {
+          "artist": "Astrokeyy",
+          "venue": "Flamingo Cantina",
+          "start": "8"
+        },
+        {
+          "artist": "VITAL Powers",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "7:35"
+        },
+        {
+          "artist": "Haha Laughing",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Juni Cortez",
+          "venue": "Kingdom",
+          "start": "8"
+        },
+        {
+          "artist": "Nathaniel Stewart",
+          "venue": "Las Perlas",
+          "start": "8:20"
+        },
+        {
+          "artist": "Almost Heaven",
+          "venue": "Lefty’s Brick Bar",
+          "start": "8"
+        },
+        {
+          "artist": "Haters",
+          "venue": "Low Down Lounge",
+          "start": "8"
+        },
+        {
+          "artist": "Los Variantes del Ritmo",
+          "venue": "Mala Fama Rooftop",
+          "start": "8"
+        },
+        {
+          "artist": "PONS",
+          "venue": "Mohawk Indoor",
+          "start": "8:20"
+        },
+        {
+          "artist": "Boris and the Joy",
+          "venue": "Mohawk Outdoor",
+          "start": "8"
+        },
+        {
+          "artist": "Cici Da P",
+          "venue": "Nivel @ Mala Fama",
+          "start": "7:45"
+        },
+        {
+          "artist": "The Chopstars",
+          "venue": "Riviere",
+          "start": "8"
+        },
+        {
+          "artist": "Patrice Pike Band",
+          "venue": "Saxon Pub",
+          "start": "8"
+        },
+        {
+          "artist": "FEET",
+          "venue": "Stubb’s",
+          "start": "8"
+        },
+        {
+          "artist": "Creature Canyon",
+          "venue": "Swan Dive",
+          "start": "8:15"
+        },
+        {
+          "artist": "Caleb Lemons",
+          "venue": "Swan Dive Patio",
+          "start": "7:45"
+        },
+        {
+          "artist": "Horsepower",
+          "venue": "The 13th Floor",
+          "start": "8"
+        },
+        {
+          "artist": "Born Twins",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Rane Simons",
+          "venue": "The Lucky Duck",
+          "start": "8"
+        },
+        {
+          "artist": "Troy Campbell",
+          "venue": "Valhalla",
+          "start": "8"
+        },
+        {
+          "artist": "DJ Kimblee",
+          "venue": "Venue 6",
+          "start": "8"
+        },
+        {
+          "artist": "Fine Food Market",
+          "venue": "Wanderlust Wine Co.",
+          "start": "8"
+        }
+      ]
+    },
+    {
+      "time": "8:30p",
+      "block": "evening",
+      "sets": [
+        {
+          "artist": "Slipdress",
+          "venue": "809 E. 8th St",
+          "start": null
+        },
+        {
+          "artist": "Bára Zmeková",
+          "venue": "Augustine",
+          "start": "8:40"
+        },
+        {
+          "artist": "Gavin the Hotrod",
+          "venue": "Brushy Street Commons",
+          "start": "8:15"
+        },
+        {
+          "artist": "Jane",
+          "venue": "Delilah's Front Porch",
+          "start": "8:45"
+        },
+        {
+          "artist": "The Kellows",
+          "venue": "Elysium",
+          "start": "8:50"
+        },
+        {
+          "artist": "MORGAN",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "7:55"
+        },
+        {
+          "artist": "Kind Keith",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Sarah Crean",
+          "venue": "Marlow",
+          "start": "8:50"
+        },
+        {
+          "artist": "Puzzled Panther",
+          "venue": "Mohawk Outdoor",
+          "start": "8:45"
+        },
+        {
+          "artist": "Sofia and the Antoinettes",
+          "venue": "Moody Theater",
+          "start": "8:30"
+        },
+        {
+          "artist": "Shelby Ruger",
+          "venue": "Nivel @ Mala Fama",
+          "start": "8:25"
+        },
+        {
+          "artist": "Knats",
+          "venue": "Palm Door Patio",
+          "start": "8:40"
+        },
+        {
+          "artist": "D Chrome Foster",
+          "venue": "Riviere",
+          "start": "8:15"
+        },
+        {
+          "artist": "Cari Hutson",
+          "venue": "Saxon Pub",
+          "start": "8:50"
+        },
+        {
+          "artist": "The Animeros",
+          "venue": "Shangri-La",
+          "start": "8:40"
+        },
+        {
+          "artist": "Pierce Washington",
+          "venue": "Swan Dive Patio",
+          "start": "8"
+        },
+        {
+          "artist": "CDSM",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Poiison",
+          "venue": "Venue 6",
+          "start": "8"
+        },
+        {
+          "artist": "Lew Apollo",
+          "venue": "Zilker Brewing",
+          "start": "8:30"
+        }
+      ]
+    },
+    {
+      "time": "9p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Major Luna",
+          "venue": "809 E. 8th St",
+          "start": null
+        },
+        {
+          "artist": "Mission",
+          "venue": "Brushy Street Commons",
+          "start": "8:45"
+        },
+        {
+          "artist": "Elijah Delgado",
+          "venue": "Central Presbyterian Church",
+          "start": "9"
+        },
+        {
+          "artist": "Danxgerous",
+          "venue": "Chess Club",
+          "start": "9"
+        },
+        {
+          "artist": "Calder Allen",
+          "venue": "Continental Club",
+          "start": "9"
+        },
+        {
+          "artist": "Boooka",
+          "venue": "Flamingo Cantina",
+          "start": "9"
+        },
+        {
+          "artist": "Jeff Akoh",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "8:25"
+        },
+        {
+          "artist": "Gus Baldwin & the Sketch",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Boogietraxx",
+          "venue": "Kingdom",
+          "start": "9"
+        },
+        {
+          "artist": "NOAMZ",
+          "venue": "Las Perlas",
+          "start": "9:10"
+        },
+        {
+          "artist": "Gran Moreno",
+          "venue": "Lefty’s Brick Bar",
+          "start": "9"
+        },
+        {
+          "artist": "Bikini Beach",
+          "venue": "Low Down Lounge",
+          "start": "9"
+        },
+        {
+          "artist": "The Cumbia Movement",
+          "venue": "Mala Fama Rooftop",
+          "start": "9"
+        },
+        {
+          "artist": "Grace Bergere",
+          "venue": "Mohawk Indoor",
+          "start": "9:15"
+        },
+        {
+          "artist": "Dee Gatti",
+          "venue": "Nivel @ Mala Fama",
+          "start": "8:40"
+        },
+        {
+          "artist": "Gwenno",
+          "venue": "Palm Door",
+          "start": "9:20"
+        },
+        {
+          "artist": "Lola Kinsey",
+          "venue": "Riviere",
+          "start": "8:30"
+        },
+        {
+          "artist": "La Texana",
+          "venue": "Stubb’s",
+          "start": "9"
+        },
+        {
+          "artist": "Chuck Prophet and His Cumbia Shoes",
+          "venue": "Swan Dive",
+          "start": "9:15"
+        },
+        {
+          "artist": "Wavy Saleen",
+          "venue": "Swan Dive Patio",
+          "start": "8:15"
+        },
+        {
+          "artist": "OKAN",
+          "venue": "The 13th Floor",
+          "start": "9"
+        },
+        {
+          "artist": "Turbo Goth",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Dallas Tetnus",
+          "venue": "Valhalla",
+          "start": "9"
+        },
+        {
+          "artist": "Shame Gang",
+          "venue": "Venue 6",
+          "start": "8:35"
+        },
+        {
+          "artist": "Lila Tristram",
+          "venue": "Wanderlust Wine Co.",
+          "start": "9"
+        },
+        {
+          "artist": "Tomar and the FCs",
+          "venue": "Zilker Brewing",
+          "start": "9:15"
+        }
+      ]
+    },
+    {
+      "time": "9:30p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Alkyone",
+          "venue": "Augustine",
+          "start": "9:35"
+        },
+        {
+          "artist": "Parris Chariz",
+          "venue": "Brushy Street Commons",
+          "start": "9:05"
+        },
+        {
+          "artist": "Philo",
+          "venue": "Delilah's Front Porch",
+          "start": "9:30"
+        },
+        {
+          "artist": "Electric Enemy",
+          "venue": "Elysium",
+          "start": "9:40"
+        },
+        {
+          "artist": "Yoso",
+          "venue": "Flamingo Cantina",
+          "start": "9:20"
+        },
+        {
+          "artist": "JayaHadADream",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "8:45"
+        },
+        {
+          "artist": "Prehuman",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Korda Korder",
+          "venue": "Marlow",
+          "start": "9:40"
+        },
+        {
+          "artist": "Gogol Bordello",
+          "venue": "Mohawk Outdoor",
+          "start": "9:45",
+          "featured": true,
+          "tier": "headliner",
+          "genre": "Punk Rock/Klezmer",
+          "audio": {
+            "energy": 0.85,
+            "danceability": 0.62,
+            "valence": 0.5
+          }
+        },
+        {
+          "artist": "Lola Young",
+          "venue": "Moody Theater",
+          "start": "9:55",
+          "featured": true,
+          "tier": "headliner",
+          "genre": "Pop/Soul",
+          "audio": {
+            "energy": 0.35,
+            "danceability": 0.45,
+            "valence": 0.25
+          }
+        },
+        {
+          "artist": "Lexaay",
+          "venue": "Nivel @ Mala Fama",
+          "start": "9"
+        },
+        {
+          "artist": "Anton The Artist",
+          "venue": "Riviere",
+          "start": "8:45"
+        },
+        {
+          "artist": "The Reverent Few",
+          "venue": "Saxon Pub",
+          "start": "9:40"
+        },
+        {
+          "artist": "Panam",
+          "venue": "Shangri-La",
+          "start": "9:30"
+        },
+        {
+          "artist": "xBValentine",
+          "venue": "Swan Dive Patio",
+          "start": "8:45"
+        },
+        {
+          "artist": "Municipal Bats",
+          "venue": "The Liberty",
+          "start": "7"
+        },
+        {
+          "artist": "Zavi",
+          "venue": "Venue 6",
+          "start": "8:50"
+        }
+      ]
+    },
+    {
+      "time": "10p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Aiko",
+          "venue": "Augustine",
+          "start": "10:20"
+        },
+        {
+          "artist": "Canon",
+          "venue": "Brushy Street Commons",
+          "start": "9:25"
+        },
+        {
+          "artist": "Holly Macve",
+          "venue": "Central Presbyterian Church",
+          "start": "10"
+        },
+        {
+          "artist": "Oscar Twins",
+          "venue": "Chess Club",
+          "start": "10"
+        },
+        {
+          "artist": "The Red Eye Gamblers",
+          "venue": "Continental Club",
+          "start": "10"
+        },
+        {
+          "artist": "Mars Gold",
+          "venue": "Delilah's Front Porch",
+          "start": "10:15"
+        },
+        {
+          "artist": "Shaunsolo",
+          "venue": "Flamingo Cantina",
+          "start": "9:40"
+        },
+        {
+          "artist": "Big Zeeks",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "9:20"
+        },
+        {
+          "artist": "J’cuuzi",
+          "venue": "Hotel Vegas",
+          "start": null
+        },
+        {
+          "artist": "Shiv",
+          "venue": "Kingdom",
+          "start": "10"
+        },
+        {
+          "artist": "HNRY FLWR",
+          "venue": "Las Perlas",
+          "start": "10"
+        },
+        {
+          "artist": "Big Bill",
+          "venue": "Lefty’s Brick Bar",
+          "start": "10"
+        },
+        {
+          "artist": "Alien Chicks",
+          "venue": "Low Down Lounge",
+          "start": "10"
+        },
+        {
+          "artist": "Los Juanos",
+          "venue": "Mala Fama Rooftop",
+          "start": "10"
+        },
+        {
+          "artist": "Anaya Kobe",
+          "venue": "Nivel @ Mala Fama",
+          "start": "9:45"
+        },
+        {
+          "artist": "congratulations",
+          "venue": "Palm Door Patio",
+          "start": "10"
+        },
+        {
+          "artist": "Rockstar Keezy",
+          "venue": "Riviere",
+          "start": "9"
+        },
+        {
+          "artist": "Tipa Tipo",
+          "venue": "Shangri-La",
+          "start": "10:20"
+        },
+        {
+          "artist": "The All-American Rejects",
+          "venue": "Stubb’s",
+          "start": "10",
+          "featured": true,
+          "tier": "headliner",
+          "genre": "Pop Punk/Emo",
+          "audio": {
+            "energy": 0.85,
+            "danceability": 0.62,
+            "valence": 0.5
+          }
+        },
+        {
+          "artist": "Victor Jones",
+          "venue": "Swan Dive",
+          "start": "10:15"
+        },
+        {
+          "artist": "Valice",
+          "venue": "Swan Dive Patio",
+          "start": "9:25"
+        },
+        {
+          "artist": "The Sophs",
+          "venue": "The 13th Floor",
+          "start": "10"
+        },
+        {
+          "artist": "Mr. Lewis & The Funeral 5",
+          "venue": "Valhalla",
+          "start": "10"
+        },
+        {
+          "artist": "néomí",
+          "venue": "Wanderlust Wine Co.",
+          "start": "10"
+        },
+        {
+          "artist": "Grandmaster",
+          "venue": "Zilker Brewing",
+          "start": "10"
+        }
+      ]
+    },
+    {
+      "time": "10:30p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Marty",
+          "venue": "Brushy Street Commons",
+          "start": "9:45"
+        },
+        {
+          "artist": "His Lordship",
+          "venue": "Elysium",
+          "start": "10:30"
+        },
+        {
+          "artist": "DJ Napalm",
+          "venue": "Flamingo Cantina",
+          "start": "10"
+        },
+        {
+          "artist": "Kofi Stone",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "9:45"
+        },
+        {
+          "artist": "Glassio",
+          "venue": "Las Perlas",
+          "start": "10:50"
+        },
+        {
+          "artist": "willoh",
+          "venue": "Marlow",
+          "start": "10:30"
+        },
+        {
+          "artist": "Brionne",
+          "venue": "Nivel @ Mala Fama",
+          "start": "10:25"
+        },
+        {
+          "artist": "The Haunted Youth",
+          "venue": "Palm Door",
+          "start": "10:40"
+        },
+        {
+          "artist": "Saanbluu",
+          "venue": "Riviere",
+          "start": "9:15"
+        },
+        {
+          "artist": "Steve Ray Ladson",
+          "venue": "Swan Dive Patio",
+          "start": "9:40"
+        }
+      ]
+    },
+    {
+      "time": "11p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Don Ready",
+          "venue": "Brushy Street Commons",
+          "start": "10:05"
+        },
+        {
+          "artist": "Eric McEntee",
+          "venue": "Central Presbyterian Church",
+          "start": "11"
+        },
+        {
+          "artist": "Lofi Legs",
+          "venue": "Chess Club",
+          "start": "11"
+        },
+        {
+          "artist": "Olivia Ellen Lloyd",
+          "venue": "Continental Club",
+          "start": "11"
+        },
+        {
+          "artist": "Samy Sharif",
+          "venue": "Elysium",
+          "start": "11:20"
+        },
+        {
+          "artist": "Yung Bryse",
+          "venue": "Flamingo Cantina",
+          "start": "10"
+        },
+        {
+          "artist": "Novelist",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "10:10"
+        },
+        {
+          "artist": "XOY",
+          "venue": "Kingdom",
+          "start": "11"
+        },
+        {
+          "artist": "Neapolitan",
+          "venue": "Low Down Lounge",
+          "start": "11"
+        },
+        {
+          "artist": "Sencible de Tierra Caliente",
+          "venue": "Mala Fama Rooftop",
+          "start": "11"
+        },
+        {
+          "artist": "PIAO",
+          "venue": "Marlow",
+          "start": "11:20"
+        },
+        {
+          "artist": "Alahsîn",
+          "venue": "Nivel @ Mala Fama",
+          "start": "10:40"
+        },
+        {
+          "artist": "Bricknasty",
+          "venue": "Palm Door Patio",
+          "start": "11:20"
+        },
+        {
+          "artist": "PRINCE YODA YASQUIAT",
+          "venue": "Riviere",
+          "start": "9:35"
+        },
+        {
+          "artist": "Julie Nolen",
+          "venue": "Saxon Pub",
+          "start": "11:20"
+        },
+        {
+          "artist": "Sultanes del Yonke",
+          "venue": "Shangri-La",
+          "start": "11:20"
+        },
+        {
+          "artist": "Cardinal Bloom",
+          "venue": "Swan Dive",
+          "start": "11:15"
+        },
+        {
+          "artist": "Blimes and the Bando",
+          "venue": "Swan Dive Patio",
+          "start": "10:05"
+        },
+        {
+          "artist": "Angela Autumn",
+          "venue": "The 13th Floor",
+          "start": "11"
+        },
+        {
+          "artist": "NIGHT DRIVE",
+          "venue": "Valhalla",
+          "start": "11"
+        },
+        {
+          "artist": "Fuego Base",
+          "venue": "Venue 6",
+          "start": "11:20"
+        },
+        {
+          "artist": "Ella Ion",
+          "venue": "Wanderlust Wine Co.",
+          "start": "11"
+        }
+      ]
+    },
+    {
+      "time": "11:30p",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Derek Minor",
+          "venue": "Brushy Street Commons",
+          "start": "10:30"
+        },
+        {
+          "artist": "Ali Almighty",
+          "venue": "Flamingo Cantina",
+          "start": "10:15"
+        },
+        {
+          "artist": "Kairo Keyz",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "10:45"
+        },
+        {
+          "artist": "DD Island",
+          "venue": "Las Perlas",
+          "start": "11:40"
+        },
+        {
+          "artist": "Booqoo",
+          "venue": "Nivel @ Mala Fama",
+          "start": "11:15"
+        },
+        {
+          "artist": "MISTA KLEEN",
+          "venue": "Riviere",
+          "start": "9:55"
+        },
+        {
+          "artist": "Cure for Paranoia",
+          "venue": "Swan Dive Patio",
+          "start": "11"
+        },
+        {
+          "artist": "Rick Hyde",
+          "venue": "Venue 6",
+          "start": "11:30"
+        }
+      ]
+    },
+    {
+      "time": "12a",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "indie tribe",
+          "venue": "Brushy Street Commons",
+          "start": "10:55"
+        },
+        {
+          "artist": "Firecracker",
+          "venue": "Chess Club",
+          "start": "12"
+        },
+        {
+          "artist": "Reilly Downes",
+          "venue": "Delilah's Front Porch",
+          "start": "12"
+        },
+        {
+          "artist": "Lucky",
+          "venue": "Elysium",
+          "start": "12:10"
+        },
+        {
+          "artist": "Bale",
+          "venue": "Global Stage @ Downright Austin Backyard",
+          "start": "11:45"
+        },
+        {
+          "artist": "Walshy Fire",
+          "venue": "Hilton Grand Ballroom (Salon HJK)",
+          "start": "11:15"
+        },
+        {
+          "artist": "Agatha is Dead!",
+          "venue": "Low Down Lounge",
+          "start": "12"
+        },
+        {
+          "artist": "Orya",
+          "venue": "Mala Fama Rooftop",
+          "start": "12"
+        },
+        {
+          "artist": "Adult Leisure",
+          "venue": "Marlow",
+          "start": "12"
+        },
+        {
+          "artist": "Eric Sebastian",
+          "venue": "Nivel @ Mala Fama",
+          "start": "12"
+        },
+        {
+          "artist": "Sassy 009",
+          "venue": "Palm Door",
+          "start": "12",
+          "featured": true,
+          "tier": "wave2",
+          "genre": "Electronic Pop",
+          "audio": {
+            "energy": 0.55,
+            "danceability": 0.45,
+            "valence": 0.5
+          }
+        },
+        {
+          "artist": "Lynn",
+          "venue": "Riviere",
+          "start": "11:15"
+        },
+        {
+          "artist": "D2BLEE",
+          "venue": "Saxon Pub",
+          "start": "10:15"
+        },
+        {
+          "artist": "Honey Made",
+          "venue": "Stubb’s",
+          "start": "12"
+        },
+        {
+          "artist": "Wilby",
+          "venue": "Swan Dive",
+          "start": "12:15"
+        },
+        {
+          "artist": "Mama Duke",
+          "venue": "Swan Dive Patio",
+          "start": "11:30"
+        },
+        {
+          "artist": "Yes Sir",
+          "venue": "Valhalla",
+          "start": null
+        },
+        {
+          "artist": "The Animeros",
+          "venue": "Venue 6",
+          "start": "12"
+        },
+        {
+          "artist": "Benny The Butcher",
+          "venue": "Wanderlust Wine Co.",
+          "start": "12:15"
+        },
+        {
+          "artist": "No Sir.",
+          "venue": "Webberville Food Truck Park",
+          "start": "12"
+        }
+      ]
+    },
+    {
+      "time": "12:30a",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "Holy Gabbana",
+          "venue": "Brushy Street Commons",
+          "start": "11:30"
+        },
+        {
+          "artist": "H",
+          "venue": "Riviere",
+          "start": "10:35"
+        },
+        {
+          "artist": "J. Dash",
+          "venue": "Swan Dive Patio",
+          "start": "12"
+        }
+      ]
+    },
+    {
+      "time": "1a",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "DJ Trendsetter Sense + Trendsetter Cypher",
+          "venue": "Brushy Street Commons",
+          "start": "12"
+        },
+        {
+          "artist": "Secret Family",
+          "venue": "Chess Club",
+          "start": "1"
+        },
+        {
+          "artist": "The Braymores",
+          "venue": "Elysium",
+          "start": "1"
+        },
+        {
+          "artist": "DragonnQueen",
+          "venue": "Kingdom",
+          "start": "1"
+        },
+        {
+          "artist": "Escoltas Del Valle",
+          "venue": "Mala Fama Rooftop",
+          "start": "1"
+        },
+        {
+          "artist": "Jamison Wray",
+          "venue": "Riviere",
+          "start": "11"
+        },
+        {
+          "artist": "The Tremolo Beer Gut",
+          "venue": "The 13th Floor",
+          "start": "1"
+        },
+        {
+          "artist": "Peelander-Z",
+          "venue": "Valhalla",
+          "start": "1"
+        }
+      ]
+    },
+    {
+      "time": "1:30a",
+      "block": "late_night",
+      "sets": [
+        {
+          "artist": "GMSE KING SAVAGE",
+          "venue": "Riviere",
+          "start": "11:20"
+        }
+      ]
+    }
+  ],
+  "source": "reddit-community-spreadsheet",
+  "pdf": "https://static.sxsw.md/files/sxsw2026-music-thu12.pdf"
+}

@@ -26,7 +26,7 @@ Filter artists by audio features (0.0–1.0 scale):
 
 ## Curated Playlists
 
-### 🔥 Energy Boost (15 artists)
+### Energy Boost (15 artists)
 - **The All-American Rejects** — Pop Punk/Emo (USA)
 - **Gogol Bordello** — Punk Rock/Klezmer (USA/Ukraine)
 - **Los Lobos** — Rock/Latin (USA (LA))
@@ -43,14 +43,14 @@ Filter artists by audio features (0.0–1.0 scale):
 - **TTSSFU** — Punk (USA)
 - **DJ AG** — DJ/Hip-Hop (USA)
 
-### 🌊 Austin Chill (1 artists)
+### Austin Chill (1 artists)
 - **Marissa Nadler** — Folk/Dream Pop (USA)
 
-### 💃 Dance Floor (2 artists)
+### Dance Floor (2 artists)
 - **Junior H** — Latin Trap/Hip-Hop (USA/Mexico)
 - **Mau P** — Electronic/House (Netherlands)
 
-### 😊 Feel Good (15 artists)
+### Feel Good (15 artists)
 - **Charley Crockett** — Country/Americana (USA (TX))
 - **Fuerza Regida** — Regional Mexican (USA/Mexico)
 - **Don Toliver** — Hip-Hop/R&B (USA (TX))
@@ -67,7 +67,7 @@ Filter artists by audio features (0.0–1.0 scale):
 - **DJ AG** — DJ/Hip-Hop (USA)
 - **Adrian Activo** — Latin/Alternative (Austin, TX)
 
-### 🌍 Global Sounds (12 artists)
+### Global Sounds (12 artists)
 - **Gogol Bordello** — Punk Rock/Klezmer (USA/Ukraine)
 - **Fuerza Regida** — Regional Mexican (USA/Mexico)
 - **Junior H** — Latin Trap/Hip-Hop (USA/Mexico)
@@ -81,7 +81,7 @@ Filter artists by audio features (0.0–1.0 scale):
 - **Oscar Ortiz** — Regional Mexican (Mexico)
 - **Electra Hernández** — Latin/Electronic (Mexico)
 
-### 💎 Hidden Gems (15 artists)
+### Hidden Gems (15 artists)
 - **Charley Crockett** — Country/Americana (USA (TX))
 - **Passion Pit** — Indie Electronic (USA)
 - **Devin the Dude** — Hip-Hop (USA (TX))
@@ -134,6 +134,15 @@ Filter artists by audio features (0.0–1.0 scale):
 | DJ AG | DJ/Hip-Hop | USA | wave2 | 0.75 | 0.45 | 0.72 | 95 |
 | Electra Hernández | Latin/Electronic | Mexico | wave2 | 0.55 | 0.45 | 0.5 | 128 |
 | Adrian Activo | Latin/Alternative | Austin, TX | local | 0.55 | 0.45 | 0.72 | 110 |
+
+## Schedule
+
+Full 7-day show schedule available at `/music/schedule`.
+
+```bash
+curl -H "Accept: application/json" https://sxsw.md/music/schedule
+curl -H "Accept: text/markdown" https://sxsw.md/music/schedule/2026-03-14
+```
 
 ## API
 

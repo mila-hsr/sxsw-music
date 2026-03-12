@@ -1,0 +1,190 @@
+{
+  "title": "SXSW 2026 Music Schedule",
+  "days": [
+    {
+      "date": "2026-03-12",
+      "day": "Thursday",
+      "short": "Thu Mar 12",
+      "total_acts": 273,
+      "total_venues": 44,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 6
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 43
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 97
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 140
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-thu12.pdf"
+    },
+    {
+      "date": "2026-03-13",
+      "day": "Friday",
+      "short": "Fri Mar 13",
+      "total_acts": 345,
+      "total_venues": 58,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 7
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 127
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 119
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 151
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-fri13.pdf"
+    },
+    {
+      "date": "2026-03-14",
+      "day": "Saturday",
+      "short": "Sat Mar 14",
+      "total_acts": 364,
+      "total_venues": 60,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 5
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 136
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 121
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 163
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-sat14.pdf"
+    },
+    {
+      "date": "2026-03-15",
+      "day": "Sunday",
+      "short": "Sun Mar 15",
+      "total_acts": 341,
+      "total_venues": 53,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 0
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 92
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 121
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 167
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-sun15.pdf"
+    },
+    {
+      "date": "2026-03-16",
+      "day": "Monday",
+      "short": "Mon Mar 16",
+      "total_acts": 257,
+      "total_venues": 47,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 1
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 40
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 76
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 157
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-mon16.pdf"
+    },
+    {
+      "date": "2026-03-17",
+      "day": "Tuesday",
+      "short": "Tue Mar 17",
+      "total_acts": 270,
+      "total_venues": 45,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 2
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 16
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 87
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 170
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-tue17.pdf"
+    },
+    {
+      "date": "2026-03-18",
+      "day": "Wednesday",
+      "short": "Wed Mar 18",
+      "total_acts": 213,
+      "total_venues": 38,
+      "time_blocks": {
+        "daytime": {
+          "range": "9a – 11:30a",
+          "acts": 2
+        },
+        "afternoon": {
+          "range": "12p – 4:30p",
+          "acts": 24
+        },
+        "evening": {
+          "range": "5p – 8:30p",
+          "acts": 59
+        },
+        "late_night": {
+          "range": "9p – 1:30a",
+          "acts": 137
+        }
+      },
+      "pdf": "https://static.sxsw.md/files/sxsw2026-music-wed18.pdf"
+    }
+  ],
+  "total_acts": 2063,
+  "source": "reddit-community-spreadsheet",
+  "lastUpdated": "2026-03-12"
+}

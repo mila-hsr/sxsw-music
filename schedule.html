@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SXSW.md — Music Schedule</title>
+<meta name="description" content="SXSW 2026 music schedule — 2,000+ acts across 7 days. Community-sourced from r/sxsw.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --text: #f5f5f0;
+  --accent-1: #c8ff00;
+  --accent-2: #ff6b35;
+  --muted: #888888;
+  --card-bg: #1a1a1a;
+  --border: #2a2a2a;
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --daytime: #7ec8e3;
+  --afternoon: #f0a870;
+  --evening: #c882c8;
+  --latenight: #e66666;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Nav (matches sxsw-md home) ── */
+.sxsw-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-logo .dot { color: var(--accent-1); }
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--accent-1); }
+
+/* ── Sub-nav (Discover / Schedule) ── */
+.sub-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+.sub-nav a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 14px 20px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.sub-nav a:hover { color: var(--text); }
+.sub-nav a.active {
+  color: var(--accent-1);
+  border-bottom-color: var(--accent-1);
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── Hero ── */
+.hero {
+  padding: 50px 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-accent {
+  width: 60px;
+  height: 2px;
+  background: var(--accent-1);
+  margin-bottom: 14px;
+}
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-1);
+  margin-bottom: 6px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.hero h1 span { color: var(--accent-1); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* ── Week Grid ── */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 10px;
+}
+.day-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+.day-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--border);
+  transition: background 0.2s;
+}
+.day-card:hover { border-color: var(--accent-1); background: rgba(200,255,0,0.02); }
+.day-card:hover::before, .day-card.active::before { background: var(--accent-1); }
+.day-card.active { border-color: var(--accent-1); }
+.day-card .day-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 1px; }
+.day-card .day-date { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); margin-bottom: 8px; }
+.day-card .day-stats { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-1); font-weight: 700; }
+.day-card .day-venues { font-family: var(--font-mono); font-size: 0.6rem; color: var(--muted); }
+.block-mini { display: flex; gap: 3px; margin-top: 8px; }
+.block-dot { height: 4px; border-radius: 1px; }
+
+/* ── Schedule Section ── */
+.schedule-section { padding: 36px 0; }
+.schedule-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.schedule-header h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+.schedule-header h2 span { color: var(--accent-1); }
+.filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.filter-input, .filter-select {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.filter-input { width: 200px; }
+.filter-input:focus, .filter-select:focus { border-color: var(--accent-1); }
+.filter-input::placeholder { color: #555; }
+.filter-select { cursor: pointer; }
+.filter-select option { background: var(--card-bg); color: var(--text); }
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.stat { display: flex; align-items: baseline; gap: 6px; }
+.stat-value { font-size: 1.3rem; font-weight: 700; color: var(--accent-1); }
+.stat-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ── Action Bar ── */
+.action-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.action-card {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.action-card:hover { border-color: var(--accent-1); }
+.action-card .ac-text { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.action-card .ac-text strong { color: var(--text); font-weight: 600; }
+.btn-action {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border: 1px solid var(--accent-1);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--accent-1);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.btn-action:hover { background: var(--accent-1); color: var(--bg); }
+.btn-action.orange { border-color: var(--accent-2); color: var(--accent-2); }
+.btn-action.orange:hover { background: var(--accent-2); color: var(--bg); }
+
+/* ── Time Block Tabs ── */
+.block-tabs { display: flex; gap: 8px; margin-bottom: 22px; flex-wrap: wrap; }
+.block-tab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.block-tab:hover { border-color: var(--accent-1); color: var(--text); }
+.block-tab.active { border-color: var(--accent-1); background: var(--accent-1); color: var(--bg); }
+.block-tab .tab-count { font-weight: 400; opacity: 0.7; margin-left: 4px; }
+
+/* ── Time Slot ── */
+.time-slot { margin-bottom: 24px; }
+.time-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+.time-label .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* ── Set Card ── */
+.set-card {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+  gap: 10px;
+  cursor: default;
+}
+.set-card:hover { border-color: var(--accent-1); background: rgba(200,255,0,0.02); }
+.set-card.has-features { border-left: 2px solid var(--accent-1); }
+.set-info { flex: 1; min-width: 0; }
+.set-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.set-artist { font-weight: 600; font-size: 0.95rem; }
+.set-card.has-features .set-artist { color: var(--accent-1); }
+.badge-featured {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border: 1px solid var(--accent-1);
+  border-radius: 2px;
+  color: var(--accent-1);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.badge-genre {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  padding: 2px 6px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 2px;
+}
+.set-venue {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.mini-features {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+.mini-feat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.mini-feat-label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: #555;
+  text-transform: uppercase;
+  width: 28px;
+}
+.mini-bar-bg {
+  width: 50px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.mini-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--accent-1);
+  transition: width 0.4s ease;
+}
+.set-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.set-time {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-2);
+  min-width: 36px;
+  text-align: right;
+}
+.set-actions { display: flex; gap: 5px; }
+.btn-sm {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-sm:hover { border-color: var(--accent-1); color: var(--accent-1); }
+.btn-sm.playlist-btn { border-color: var(--accent-2); color: var(--accent-2); }
+.btn-sm.playlist-btn:hover { background: var(--accent-2); color: var(--bg); }
+
+/* ── Vibe CTA ── */
+.vibe-cta {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 20px 24px;
+  margin: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.2s;
+}
+.vibe-cta:hover { border-color: var(--accent-2); }
+.vibe-cta-left { flex: 1; }
+.vibe-cta-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-2);
+  margin-bottom: 4px;
+}
+.vibe-cta-title { font-size: 1.05rem; font-weight: 600; }
+.vibe-cta-sub { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
+
+/* ── Loading ── */
+.loading {
+  text-align: center;
+  padding: 60px 0;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.loading-dot { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+
+/* ── Agent hint ── */
+.agent-hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #444;
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+.agent-hint code {
+  color: #666;
+  background: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+/* ── Footer (matches sxsw-md home) ── */
+.footer {
+  max-width: 960px;
+  margin: 36px auto 0;
+  padding: 28px 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.footer-left a {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-1);
+  text-decoration: none;
+}
+.footer-left a .dot { color: var(--accent-1); }
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #555;
+}
+.footer-disclaimer {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: #333;
+  text-align: center;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .sxsw-nav, .sub-nav, .container { padding-left: 20px; padding-right: 20px; }
+  .week-grid { grid-template-columns: repeat(auto-fit, minmax(95px, 1fr)); gap: 6px; }
+  .day-card { padding: 10px; }
+  .set-card { flex-wrap: wrap; }
+  .set-info { min-width: 100%; }
+  .mini-features { flex-wrap: wrap; }
+  .filters { width: 100%; }
+  .filter-input { width: 100%; }
+  .action-bar { flex-direction: column; }
+  .vibe-cta { flex-direction: column; text-align: center; }
+  .sxsw-nav { flex-direction: column; gap: 12px; }
+  .footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Main Nav (matches sxsw-md) ── -->
+<nav class="sxsw-nav">
+  <a href="https://sxsw.md/" class="nav-logo">SXSW<span class="dot">.</span>md</a>
+  <ul class="nav-links">
+    <li><a href="https://sxsw.md/news">News</a></li>
+    <li><a href="https://sxsw.md/sessions">Sessions</a></li>
+    <li><a href="/music" class="active">Music</a></li>
+    <li><a href="https://sxsw.md/nexus">Nexus</a></li>
+  </ul>
+</nav>
+
+<!-- ── Sub-nav: Discover ↔ Schedule ── -->
+<div class="sub-nav">
+  <a href="/music">Discover</a>
+  <a href="/music/schedule" class="active">Schedule</a>
+</div>
+
+<div class="container">
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-accent"></div>
+    <div class="hero-label">Music Schedule</div>
+    <h1>Live Music <span>Every Night</span></h1>
+    <p class="hero-sub" id="heroSub">Loading schedule data...</p>
+    <div class="week-grid" id="weekGrid"></div>
+  </section>
+
+  <!-- ── Day Schedule ── -->
+  <section class="schedule-section">
+    <div class="schedule-header">
+      <h2 id="dayTitle">Loading...</h2>
+      <div class="filters">
+        <input type="text" class="filter-input" placeholder="Search artist..." id="searchInput" oninput="filterSets()">
+        <select class="filter-select" id="venueFilter" onchange="filterSets()">
+          <option value="">All venues</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats-bar" id="statsBar"></div>
+
+    <!-- ── Action Bar ── -->
+    <div class="action-bar" id="actionBar"></div>
+
+    <!-- Block Tabs -->
+    <div class="block-tabs" id="blockTabs"></div>
+
+    <!-- Schedule Content (dynamically populated) -->
+    <div id="scheduleContent">
+      <div class="loading"><span class="loading-dot">Loading schedule...</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ── Agent Hint ── -->
+<p class="agent-hint">Are you an AI agent? Request this URL with <code>Accept: text/markdown</code> or <code>Accept: application/json</code> to get structured schedule data. <code>curl https://sxsw.md/music/schedule</code></p>
+
+<!-- ── Footer (matches sxsw-md) ── -->
+<footer class="footer">
+  <div class="footer-left">
+    <a href="/">SXSW<span class="dot">.</span>md</a>
+  </div>
+  <div class="footer-right">
+    Curated by agents. Directed by humans. Austin, March 2026.
+  </div>
+  <div class="footer-disclaimer">
+    Independent project. Not affiliated with SXSW, LLC.
+  </div>
+</footer>
+
+<script>
+// ── State ──
+let weekData = null;
+let currentDayData = null;
+let currentDayKey = null;
+let activeBlock = 'all';
+
+const BLOCK_COLORS = {
+  daytime: '#7ec8e3',
+  afternoon: '#f0a870',
+  evening: '#c882c8',
+  late_night: '#e66666'
+};
+
+const BLOCK_LABELS = {
+  daytime: 'Daytime',
+  afternoon: 'Afternoon',
+  evening: 'Evening',
+  late_night: 'Late Night'
+};
+
+const VIBE_CTAS = {
+  afternoon: { title: "Like what's playing this afternoon?", sub: "Build a playlist from today's lineup based on mood, energy and genre.", context: 'afternoon' },
+  evening: { title: "Going out tonight?", sub: "Tell us your vibe and we'll match you with artists playing late night.", context: 'latenight' },
+};
+
+const PDF_BASE = 'https://static.sxsw.md/files/';
+
+const DAY_KEYS = ['thu12','fri13','sat14','sun15','mon16','tue17','wed18'];
+const DAY_DATES = ['2026-03-12','2026-03-13','2026-03-14','2026-03-15','2026-03-16','2026-03-17','2026-03-18'];
+
+// ── Init ──
+async function init() {
+  try {
+    const resp = await fetch('./schedule/index.json');
+    weekData = await resp.json();
+    renderWeekGrid();
+
+    // Determine which day to show — today if within range, else Thursday
+    const today = new Date().toISOString().split('T')[0];
+    const todayIdx = DAY_DATES.indexOf(today);
+    const startIdx = todayIdx >= 0 ? todayIdx : 0;
+    await selectDay(DAY_DATES[startIdx]);
+  } catch(e) {
+    console.error('Failed to load schedule:', e);
+    document.getElementById('scheduleContent').innerHTML = '<div class="loading">Failed to load schedule data.</div>';
+  }
+}
+
+// ── Week Grid ──
+function renderWeekGrid() {
+  const grid = document.getElementById('weekGrid');
+  const totalActs = weekData.days.reduce((s,d) => s + d.total_acts, 0);
+  document.getElementById('heroSub').textContent = `${totalActs.toLocaleString()} acts across 7 days. Community-sourced from r/sxsw. Updated daily.`;
+
+  grid.innerHTML = weekData.days.map((d, i) => {
+    const tb = d.time_blocks;
+    const total = tb.daytime.acts + tb.afternoon.acts + tb.evening.acts + tb.late_night.acts;
+    const scale = (v) => Math.max(4, Math.round((v / total) * 80));
+    return `<a class="day-card" data-date="${d.date}" onclick="selectDay('${d.date}')">
+      <div class="day-name">${d.day}</div>
+      <div class="day-date">${d.short.split(' ').slice(1).join(' ')}</div>
+      <div class="day-stats">${d.total_acts}</div>
+      <div class="day-venues">${d.total_venues} venues</div>
+      <div class="block-mini">
+        <div class="block-dot" style="background:var(--daytime);width:${scale(tb.daytime.acts)}px"></div>
+        <div class="block-dot" style="background:var(--afternoon);width:${scale(tb.afternoon.acts)}px"></div>
+        <div class="block-dot" style="background:var(--evening);width:${scale(tb.evening.acts)}px"></div>
+        <div class="block-dot" style="background:var(--latenight);width:${scale(tb.late_night.acts)}px"></div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+// ── Select Day ──
+async function selectDay(date) {
+  // Highlight active day card
+  document.querySelectorAll('.day-card').forEach(c => {
+    c.classList.toggle('active', c.dataset.date === date);
+  });
+
+  // Show loading
+  document.getElementById('scheduleContent').innerHTML = '<div class="loading"><span class="loading-dot">Loading...</span></div>';
+
+  try {
+    const resp = await fetch(`./schedule/${date}.json`);
+    currentDayData = await resp.json();
+    currentDayKey = DAY_KEYS[DAY_DATES.indexOf(date)];
+    activeBlock = 'all';
+    renderDaySchedule();
+  } catch(e) {
+    console.error('Failed to load day:', e);
+    document.getElementById('scheduleContent').innerHTML = '<div class="loading">Failed to load day data.</div>';
+  }
+}
+
+// ── Render Day ──
+function renderDaySchedule() {
+  const d = currentDayData;
+  const dateParts = d.date.split('-');
+
+  // Title
+  document.getElementById('dayTitle').innerHTML = `${d.day}, <span>March ${parseInt(dateParts[2])}</span>`;
+
+  // Stats
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat"><span class="stat-value">${d.total_acts}</span><span class="stat-label">acts</span></div>
+    <div class="stat"><span class="stat-value">${d.total_venues}</span><span class="stat-label">venues</span></div>
+    <div class="stat"><span class="stat-value">${d.time_blocks.daytime.range.split('–')[0].trim()}</span><span class="stat-label">first set</span></div>
+    <div class="stat"><span class="stat-value">${d.time_blocks.late_night.range.split('–')[1].trim()}</span><span class="stat-label">last set</span></div>
+  `;
+
+  // Action bar
+  const pdfFile = `sxsw2026-music-${currentDayKey}.pdf`;
+  document.getElementById('actionBar').innerHTML = `
+    <div class="action-card">
+      <span class="ac-text"><strong>Download</strong> — PDF or JSON</span>
+      <div style="display:flex;gap:6px;">
+        <a class="btn-action" href="${PDF_BASE}${pdfFile}" target="_blank">PDF</a>
+        <a class="btn-action orange" href="./schedule/${d.date}.json" target="_blank">JSON</a>
+      </div>
+    </div>
+    <div class="action-card" style="border-color:var(--accent-2);">
+      <span class="ac-text"><strong>Playlist mode</strong> — Match artists by mood & energy</span>
+      <a class="btn-action orange" href="/music">Open Discover</a>
+    </div>
+  `;
+
+  // Venue filter
+  const venueSelect = document.getElementById('venueFilter');
+  venueSelect.innerHTML = '<option value="">All venues</option>' +
+    d.venues.map(v => `<option>${v}</option>`).join('');
+
+  // Clear search
+  document.getElementById('searchInput').value = '';
+
+  // Block tabs
+  const tb = d.time_blocks;
+  const totalActs = tb.daytime.acts + tb.afternoon.acts + tb.evening.acts + tb.late_night.acts;
+  document.getElementById('blockTabs').innerHTML = `
+    <button class="block-tab active" onclick="filterBlock('all',this)">All <span class="tab-count">${totalActs}</span></button>
+    <button class="block-tab" onclick="filterBlock('daytime',this)"><span style="color:var(--daytime)">●</span> Daytime <span class="tab-count">${tb.daytime.acts}</span></button>
+    <button class="block-tab" onclick="filterBlock('afternoon',this)"><span style="color:var(--afternoon)">●</span> Afternoon <span class="tab-count">${tb.afternoon.acts}</span></button>
+    <button class="block-tab" onclick="filterBlock('evening',this)"><span style="color:var(--evening)">●</span> Evening <span class="tab-count">${tb.evening.acts}</span></button>
+    <button class="block-tab" onclick="filterBlock('late_night',this)"><span style="color:var(--latenight)">●</span> Late Night <span class="tab-count">${tb.late_night.acts}</span></button>
+  `;
+
+  // Render schedule
+  renderScheduleContent();
+}
+
+function renderScheduleContent() {
+  const d = currentDayData;
+  let html = '';
+  let prevBlock = null;
+
+  for (const slot of d.schedule) {
+    const blockColor = BLOCK_COLORS[slot.block] || '#888';
+
+    // Insert Vibe CTA between block transitions
+    if (prevBlock && prevBlock !== slot.block && VIBE_CTAS[prevBlock]) {
+      const cta = VIBE_CTAS[prevBlock];
+      html += `<div class="vibe-cta" data-block-cta="${prevBlock}">
+        <div class="vibe-cta-left">
+          <div class="vibe-cta-label">Playlist Recommender</div>
+          <div class="vibe-cta-title">${cta.title}</div>
+          <div class="vibe-cta-sub">${cta.sub}</div>
+        </div>
+        <a class="btn-action orange" href="/music?context=${currentDayKey}-${cta.context}">Build Playlist</a>
+      </div>`;
+    }
+    prevBlock = slot.block;
+
+    html += `<div class="time-block" data-block="${slot.block}">`;
+    html += `<div class="time-slot">`;
+    html += `<div class="time-label"><span class="dot" style="background:${blockColor}"></span>${slot.time}</div>`;
+
+    for (const s of slot.sets) {
+      const isFeatured = s.featured;
+      const isHeadliner = isFeatured && (s.tier === 'headliner' || s.tier === 'headliners');
+      const featClass = isFeatured ? ' has-features' : '';
+      const artistLower = s.artist.toLowerCase();
+      const venueLower = s.venue.toLowerCase();
+
+      html += `<div class="set-card${featClass}" data-artist="${artistLower}" data-venue="${venueLower}">`;
+      html += `<div class="set-info">`;
+      html += `<div class="set-top">`;
+      html += `<span class="set-artist">${s.artist}</span>`;
+
+      if (isHeadliner) {
+        html += `<span class="badge-featured" style="border-color:var(--accent-2);color:var(--accent-2)">Headliner</span>`;
+      } else if (isFeatured) {
+        html += `<span class="badge-featured">Featured Artist</span>`;
+      }
+      if (s.genre) {
+        html += `<span class="badge-genre">${s.genre}</span>`;
+      }
+
+      html += `</div>`; // .set-top
+      html += `<div class="set-venue">${s.venue}</div>`;
+
+      if (s.audio) {
+        const barColor = isHeadliner ? 'var(--accent-2)' : 'var(--accent-1)';
+        html += `<div class="mini-features">
+          <div class="mini-feat"><span class="mini-feat-label">NRG</span><div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${Math.round(s.audio.energy*100)}%;background:${barColor}"></div></div></div>
+          <div class="mini-feat"><span class="mini-feat-label">DNC</span><div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${Math.round(s.audio.danceability*100)}%;background:${barColor}"></div></div></div>
+          <div class="mini-feat"><span class="mini-feat-label">VIB</span><div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${Math.round(s.audio.valence*100)}%;background:${barColor}"></div></div></div>
+        </div>`;
+      }
+
+      html += `</div>`; // .set-info
+      html += `<div class="set-right">`;
+      html += `<span class="set-time">${s.start || ''}</span>`;
+      html += `<div class="set-actions">`;
+      html += `<a class="btn-sm" href="https://open.spotify.com/search/${encodeURIComponent(s.artist)}" target="_blank" rel="noopener">Spotify</a>`;
+
+      if (isFeatured && s.genre) {
+        const genreSlug = s.genre.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
+        html += `<a class="btn-sm playlist-btn" href="/music?genre=${genreSlug}" title="Find similar artists">Similar</a>`;
+      }
+
+      html += `</div></div>`; // .set-actions, .set-right
+      html += `</div>`; // .set-card
+    }
+
+    html += `</div></div>`; // .time-slot, .time-block
+  }
+
+  document.getElementById('scheduleContent').innerHTML = html;
+}
+
+// ── Filters ──
+function filterBlock(block, btn) {
+  activeBlock = block;
+  document.querySelectorAll('.block-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.time-block').forEach(tb => {
+    tb.style.display = (block === 'all' || tb.dataset.block === block) ? '' : 'none';
+  });
+  document.querySelectorAll('.vibe-cta').forEach(v => {
+    v.style.display = (block === 'all') ? '' : 'none';
+  });
+}
+
+function filterSets() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const v = document.getElementById('venueFilter').value.toLowerCase();
+  document.querySelectorAll('.set-card').forEach(card => {
+    const artist = card.dataset.artist || '';
+    const venue = card.dataset.venue || '';
+    card.style.display = ((!q || artist.includes(q)) && (!v || venue.includes(v))) ? '' : 'none';
+  });
+  document.querySelectorAll('.time-slot').forEach(slot => {
+    const visible = slot.querySelectorAll('.set-card:not([style*="display: none"])');
+    slot.style.display = visible.length ? '' : 'none';
+  });
+}
+
+// ── Launch ──
+init();
+</script>
+
+</body>
+</html>
