@@ -1,0 +1,1390 @@
+{
+  "_meta": {
+    "generated": "2026-03-12T20:27:38.769Z",
+    "total_physical_venues": 85,
+    "total_venue_names": 104,
+    "found": 85,
+    "not_found": 0
+  },
+  "venues": {
+    "1601 Garden St": {
+      "name": "1601 Garden St",
+      "variants": [
+        "1601 Garden St"
+      ],
+      "address": "1601 Garden St, Austin, TX 78702",
+      "lat": 30.2631,
+      "lng": -97.7218,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=1601+Garden+St,+Austin,+TX+78702",
+      "thumbnail": null,
+      "type": "Venue",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "29th Street Ballroom": {
+      "name": "29th Street Ballroom",
+      "variants": [
+        "29th Street Ballroom"
+      ],
+      "address": "2906 Fruth St",
+      "lat": 30.295315,
+      "lng": -97.74205,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.295315,-97.74205",
+      "thumbnail": "https://serpapi.com/searches/69b3206da973c493b682bad0/images/Gn7Q80337PBk2rnao2FWk5tMgprofAkCU9WIbch74Ng.jpeg",
+      "type": "Event venue",
+      "rating": 4.5,
+      "reviews": 2500,
+      "phone": null,
+      "website": null
+    },
+    "6111 Hogan Ave": {
+      "name": "6111 Hogan Ave",
+      "variants": [
+        "6111 Hogan Ave"
+      ],
+      "address": "6111 Hogan Ave, Austin, TX 78741",
+      "lat": 30.2280,
+      "lng": -97.7150,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=6111+Hogan+Ave,+Austin,+TX+78741",
+      "thumbnail": null,
+      "type": "Venue",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "809 E. 8th St": {
+      "name": "809 E. 8th St",
+      "variants": [
+        "809 E. 8th St"
+      ],
+      "address": "809 E 8th St, Austin, TX 78702",
+      "lat": 30.2648,
+      "lng": -97.7300,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=809+E+8th+St,+Austin,+TX+78702",
+      "thumbnail": null,
+      "type": "Venue",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "ABGB": {
+      "name": "ABGB",
+      "variants": [
+        "ABGB"
+      ],
+      "address": "1305 W Oltorf St",
+      "lat": 30.24533,
+      "lng": -97.76889,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.24533,-97.76889",
+      "thumbnail": "https://serpapi.com/searches/69b320763f79e8208c7caae7/images/KM6gKC6reJIytUzBetPsFEaXSomMekuvvDuHvNMhDqw.jpeg",
+      "type": "Brewpub",
+      "rating": 4.6,
+      "reviews": 1500,
+      "phone": null,
+      "website": null
+    },
+    "Alienated Majesty": {
+      "name": "Alienated Majesty",
+      "variants": [
+        "Alienated Majesty"
+      ],
+      "address": "613 W 29th St",
+      "lat": 30.295446,
+      "lng": -97.74372,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.295446,-97.74372",
+      "thumbnail": "https://serpapi.com/searches/69b3207d8681806c2f5d34d9/images/QfGOcHwdlCeP8jM-F8Ud4mDQX6uxQsdAUTXp3WMTsyE.jpeg",
+      "type": "Book store",
+      "rating": 4.8,
+      "reviews": 128,
+      "phone": "(512) 243-6679",
+      "website": null
+    },
+    "Antone’s": {
+      "name": "Antone’s",
+      "variants": [
+        "Antone’s"
+      ],
+      "address": "305 E 5th St.",
+      "lat": 30.26622,
+      "lng": -97.74036,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26622,-97.74036",
+      "thumbnail": "https://serpapi.com/searches/69b3207ef8cc780c8b09fe78/images/oSrIZ8qCBV6Sq9KzwU5ajXkG7Ga4ra4wKSBCoym8SD4.jpeg",
+      "type": "Live Music",
+      "rating": 4.5,
+      "reviews": 1800,
+      "phone": null,
+      "website": null
+    },
+    "Augustine": {
+      "name": "Augustine",
+      "variants": [
+        "Augustine"
+      ],
+      "address": "86 Rainey St",
+      "lat": 30.259668,
+      "lng": -97.73864,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.259668,-97.73864",
+      "thumbnail": "https://serpapi.com/searches/69b320825abea5c51008b6b2/images/gG7M7GXW5Vfa3YAx-WfiKHlIi7ebrqPi9gKZjAiiOSM.jpeg",
+      "type": "Bar",
+      "rating": 4.2,
+      "reviews": 190,
+      "phone": null,
+      "website": null
+    },
+    "Austin Marriott": {
+      "name": "Austin Marriott Downtown",
+      "variants": [
+        "Austin Marriott"
+      ],
+      "address": "304 E Cesar Chavez St, Austin, TX 78701",
+      "lat": 30.262842,
+      "lng": -97.741585,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.262842,-97.741585",
+      "thumbnail": null,
+      "type": "Hotel",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "Batch": {
+      "name": "Batch",
+      "variants": [
+        "Batch"
+      ],
+      "address": "3220 Manor Rd",
+      "lat": 30.287125,
+      "lng": -97.703224,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.287125,-97.703224",
+      "thumbnail": "https://serpapi.com/searches/69b3208709a51aa6930c3375/images/-lvggIe06ghYyCkjuIKf4m-Rakd99BXJvLK0ZPTQ1bk.jpeg",
+      "type": "Brewery",
+      "rating": 4.7,
+      "reviews": 1500,
+      "phone": null,
+      "website": null
+    },
+    "Blazer Tag": {
+      "name": "Blazer Tag",
+      "variants": [
+        "Blazer Tag"
+      ],
+      "address": "1701 W Ben White Blvd",
+      "lat": 30.226942,
+      "lng": -97.78294,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.226942,-97.78294",
+      "thumbnail": "https://serpapi.com/searches/69b320899d26cf5129c514bb/images/oATC1qIYaAUoCALC4A5oUmzlBD9-0E2uM2WYnPWhjg8.jpeg",
+      "type": "Laser tag center",
+      "rating": 4.5,
+      "reviews": 946,
+      "phone": null,
+      "website": null
+    },
+    "Breakaway Records": {
+      "name": "Breakaway Records",
+      "variants": [
+        "Breakaway Records"
+      ],
+      "address": "211 W N Loop Blvd",
+      "lat": 30.318373,
+      "lng": -97.72444,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.318373,-97.72444",
+      "thumbnail": "https://serpapi.com/searches/69b3208cd17a806ed95eb62b/images/fNp3AaD5MywWjAYa0BFHsqbl5Nmw9N-N0UW63MlbvFk.jpeg",
+      "type": "Record store",
+      "rating": 4.7,
+      "reviews": 499,
+      "phone": "(512) 538-0174",
+      "website": null
+    },
+    "Brushy Street Commons": {
+      "name": "Brushy Street Commons",
+      "variants": [
+        "Brushy Street Commons"
+      ],
+      "address": "501 Brushy St",
+      "lat": 30.264822,
+      "lng": -97.73399,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.264822,-97.73399",
+      "thumbnail": "https://serpapi.com/searches/69b3209209a51ab1413918ec/images/H4-uE9ZnqhOk0zSeH7QZqD1QGjbMD_a4Twtr41pkWTE.jpeg",
+      "type": "Live Music",
+      "rating": 4.5,
+      "reviews": 11,
+      "phone": null,
+      "website": null
+    },
+    "Central Machine Works": {
+      "name": "Central Machine Works",
+      "variants": [
+        "Central Machine Works"
+      ],
+      "address": "4824 E Cesar Chavez St",
+      "lat": 30.25203,
+      "lng": -97.70157,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.25203,-97.70157",
+      "thumbnail": "https://serpapi.com/searches/69b3209d5c26222b8460f49a/images/eecFMnSgeQWWzgwHiA6qs7zbcrEU-JOvEgzY0wDFK-U.png",
+      "type": "Brewery",
+      "rating": 4.4,
+      "reviews": 762,
+      "phone": null,
+      "website": null
+    },
+    "Central Presbyterian Church": {
+      "name": "Central Presbyterian Church",
+      "variants": [
+        "Central Presbyterian Church"
+      ],
+      "address": "200 E 8th St",
+      "lat": 30.269676,
+      "lng": -97.74055,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.269676,-97.74055",
+      "thumbnail": null,
+      "type": "Presbyterian church",
+      "rating": 4.4,
+      "reviews": 78,
+      "phone": "(512) 472-2445",
+      "website": null
+    },
+    "Cheer Up Charlie's": {
+      "name": "Cheer Up Charlie's",
+      "variants": [
+        "Cheer Up Charlie's",
+        "Cheer Up Charlies"
+      ],
+      "address": "900 Red River St",
+      "lat": 30.269611,
+      "lng": -97.73634,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.269611,-97.73634",
+      "thumbnail": "https://serpapi.com/searches/69b320a19c2312803d7865f1/images/-LFH6M5HR5ZktbIHlR0IcfY-1XHqRBXtuQuHahm7sfA.jpeg",
+      "type": "Live Music",
+      "rating": 4.6,
+      "reviews": 559,
+      "phone": null,
+      "website": null
+    },
+    "Cherrywood Coffeehouse": {
+      "name": "Cherrywood Coffeehouse",
+      "variants": [
+        "Cherrywood Coffeehouse"
+      ],
+      "address": "1400 E 38th 1/2 St",
+      "lat": 30.293564,
+      "lng": -97.71602,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.293564,-97.71602",
+      "thumbnail": "https://serpapi.com/searches/69b320a419c5f6435e888706/images/wPzIQjd5RwOo4lZNIc8ZP4B0wm0GBtIq7pkiWKyUplc.png",
+      "type": "Restaurant",
+      "rating": 4.5,
+      "reviews": 2400,
+      "phone": null,
+      "website": null
+    },
+    "Chess Club": {
+      "name": "Chess Club",
+      "variants": [
+        "Chess Club"
+      ],
+      "address": "617 Red River St",
+      "lat": 30.267267,
+      "lng": -97.73676,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267267,-97.73676",
+      "thumbnail": null,
+      "type": "Bar",
+      "rating": 4.5,
+      "reviews": 49,
+      "phone": null,
+      "website": null
+    },
+    "Coconut Club": {
+      "name": "Coconut Club",
+      "variants": [
+        "Coconut Club",
+        "Coconut Club Rooftop"
+      ],
+      "address": "310B Colorado St",
+      "lat": 30.266296,
+      "lng": -97.745155,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266296,-97.745155",
+      "thumbnail": null,
+      "type": "Dance club",
+      "rating": 4.3,
+      "reviews": 501,
+      "phone": null,
+      "website": null
+    },
+    "Continental Club": {
+      "name": "Continental Club",
+      "variants": [
+        "Continental Club"
+      ],
+      "address": "1315 S Congress Ave",
+      "lat": 30.25052,
+      "lng": -97.74913,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.25052,-97.74913",
+      "thumbnail": "https://serpapi.com/searches/69b320abb255a8ff8cf8a356/images/XcMUZli1VTii6MOWQYKHVB2K0zkFJrSVTzZOWef1__U.jpeg",
+      "type": "Live music bar",
+      "rating": 4.7,
+      "reviews": 2200,
+      "phone": null,
+      "website": null
+    },
+    "Delilah's Front Porch": {
+      "name": "Delilah's Front Porch",
+      "variants": [
+        "Delilah's Front Porch"
+      ],
+      "address": "830 Airport Blvd",
+      "lat": 30.25753,
+      "lng": -97.69363,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.25753,-97.69363",
+      "thumbnail": null,
+      "type": "Food producer",
+      "rating": 4.8,
+      "reviews": 28,
+      "phone": "(425) 236-3320",
+      "website": null
+    },
+    "Downright": {
+      "name": "Downright",
+      "variants": [
+        "Downright"
+      ],
+      "address": "701 E 11th St",
+      "lat": 30.27013,
+      "lng": -97.73403,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.27013,-97.73403",
+      "thumbnail": null,
+      "type": "Hotel",
+      "rating": 4.6,
+      "reviews": 878,
+      "phone": "(512) 478-1111",
+      "website": null
+    },
+    "Downright Austin": {
+      "name": "Downright Austin",
+      "variants": [
+        "Global Stage @ Downright Austin Backyard"
+      ],
+      "address": "701 E 11th St",
+      "lat": 30.27013,
+      "lng": -97.73403,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.27013,-97.73403",
+      "thumbnail": null,
+      "type": "Hotel",
+      "rating": 4.6,
+      "reviews": 878,
+      "phone": "(512) 478-1111",
+      "website": null
+    },
+    "Elysium": {
+      "name": "Elysium",
+      "variants": [
+        "Elysium"
+      ],
+      "address": "705 Red River St",
+      "lat": 30.267647,
+      "lng": -97.73665,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267647,-97.73665",
+      "thumbnail": "https://serpapi.com/searches/69b320b3aa0a8822ee3479cc/images/FkFzrPjvLvqGY0ezuyU8kkUk1SUN2wmFcW9Z47Mm3Bs.jpeg",
+      "type": "Night club",
+      "rating": 4.4,
+      "reviews": 464,
+      "phone": null,
+      "website": null
+    },
+    "End of an Ear": {
+      "name": "End of an Ear",
+      "variants": [
+        "End of an Ear"
+      ],
+      "address": "4304 Clawson Rd",
+      "lat": 30.229036,
+      "lng": -97.78435,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.229036,-97.78435",
+      "thumbnail": "https://serpapi.com/searches/69b320b72088afc1980c501b/images/WTth_7HyU9igboUIaSxWbv5QTrWnPY4s0xAD0zwXZwQ.jpeg",
+      "type": "Record store",
+      "rating": 4.8,
+      "reviews": 1100,
+      "phone": "(512) 462-6008",
+      "website": null
+    },
+    "Flamingo Cantina": {
+      "name": "Flamingo Cantina",
+      "variants": [
+        "Flamingo Cantina"
+      ],
+      "address": "515 E 6th St",
+      "lat": 30.266514,
+      "lng": -97.73773,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266514,-97.73773",
+      "thumbnail": "https://serpapi.com/searches/69b320b9556ce39a854093df/images/emuU4Ymj5F1BU3W4O5Lc5o5vZq9RKJUGwfEuR0Q3X3Q.jpeg",
+      "type": "Night club",
+      "rating": 4.6,
+      "reviews": 159,
+      "phone": null,
+      "website": null
+    },
+    "Friendly Rio Mart": {
+      "name": "Friendly Rio Mart",
+      "variants": [
+        "Friendly Rio Mart"
+      ],
+      "address": "620 W 29th St",
+      "lat": 30.296047,
+      "lng": -97.74351,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.296047,-97.74351",
+      "thumbnail": "https://serpapi.com/searches/69b320bab13aa7f1d255d04c/images/c42JkQ5WSYKNosvgFJmC0YQpSdmKTQAiQgylfvPs7yU.jpeg",
+      "type": "Grocery store",
+      "rating": 4.5,
+      "reviews": 69,
+      "phone": "(512) 320-0226",
+      "website": null
+    },
+    "Güero's": {
+      "name": "Güero's",
+      "variants": [
+        "Güero's"
+      ],
+      "address": "1412 S Congress Ave",
+      "lat": 30.249105,
+      "lng": -97.75022,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.249105,-97.75022",
+      "thumbnail": "https://serpapi.com/searches/69b320c16adf276f1f0ab52f/images/5gDha9YG5yFDKmeS9Fu-E2vMJtE1EnuIAtwiszTqpPc.jpeg",
+      "type": "Tex Mex",
+      "rating": 4.3,
+      "reviews": 5200,
+      "phone": null,
+      "website": null
+    },
+    "High Noon": {
+      "name": "High Noon",
+      "variants": [
+        "High Noon In",
+        "High Noon Out"
+      ],
+      "address": "2000 E Cesar Chavez St",
+      "lat": 30.256956,
+      "lng": -97.72339,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.256956,-97.72339",
+      "thumbnail": "https://serpapi.com/searches/69b320c3550cc4b338e96659/images/GyNUVViWgH2nnINE3nf_0tvcluZVLChQHD8eF-T8Y08.jpeg",
+      "type": "Bar",
+      "rating": 4.6,
+      "reviews": 221,
+      "phone": null,
+      "website": null
+    },
+    "Hilton Austin": {
+      "name": "Hilton Austin",
+      "variants": [
+        "Hilton Grand Ballroom (Salon HJK)"
+      ],
+      "address": "500 E 4th St, Austin, TX 78701",
+      "lat": 30.265182,
+      "lng": -97.738106,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.265182,-97.738106",
+      "thumbnail": null,
+      "type": "Hotel",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "Hole in the Wall": {
+      "name": "Hole in the Wall",
+      "variants": [
+        "Hole in the Wall"
+      ],
+      "address": "2538 Guadalupe St",
+      "lat": 30.290062,
+      "lng": -97.74163,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.290062,-97.74163",
+      "thumbnail": "https://serpapi.com/searches/69b320c99d26cf153dc39806/images/MwUoizpaeUMVnTysP7yBJS9j2r2xOuTYKjt5uhI4xDU.jpeg",
+      "type": "Live Music",
+      "rating": 4.5,
+      "reviews": 854,
+      "phone": null,
+      "website": null
+    },
+    "Hotel Vegas": {
+      "name": "Hotel Vegas",
+      "variants": [
+        "Hotel Vegas",
+        "Hotel Vegas Inside",
+        "Hotel Vegas Patio"
+      ],
+      "address": "1502 E 6th St",
+      "lat": 30.263418,
+      "lng": -97.72723,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.263418,-97.72723",
+      "thumbnail": "https://serpapi.com/searches/69b320cf3d40b6b9aa87b435/images/uqhO30-hjf2Qj9a7t2tHySU30NeAeBbkyln_QWHMbPw.jpeg",
+      "type": "Bar",
+      "rating": 4.5,
+      "reviews": 1200,
+      "phone": null,
+      "website": null
+    },
+    "HowMuch Studios": {
+      "name": "HowMuch Studios",
+      "variants": [
+        "HowMuch?! Studios In",
+        "HowMuch?! Studios Out"
+      ],
+      "address": "6910 Shirley Ave Suite L",
+      "lat": 30.336586,
+      "lng": -97.71892,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.336586,-97.71892",
+      "thumbnail": "https://serpapi.com/searches/69b320d349579aa3756cec60/images/J1v22f2h9NJjvL_LTEX3eOtQi9Bp_VGT4vRcGnxfd-A.jpeg",
+      "type": "Recording studio",
+      "rating": 5,
+      "reviews": 41,
+      "phone": "(512) 587-8542",
+      "website": null
+    },
+    "Inn Cahoots Austin": {
+      "name": "Inn Cahoots Austin",
+      "variants": [
+        "Inn Cahoots Austin Garden",
+        "Inn Cahoots Studio"
+      ],
+      "address": "1221 E 6th St",
+      "lat": 30.263988,
+      "lng": -97.729706,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.263988,-97.729706",
+      "thumbnail": null,
+      "type": "Hotel",
+      "rating": 4.7,
+      "reviews": 264,
+      "phone": "(512) 943-2175",
+      "website": null
+    },
+    "Kick Butt Coffee": {
+      "name": "Kick Butt Coffee",
+      "variants": [
+        "Kick Butt Coffee"
+      ],
+      "address": "5775 Airport Blvd Suite 725",
+      "lat": 30.32243,
+      "lng": -97.71369,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.32243,-97.71369",
+      "thumbnail": "https://serpapi.com/searches/69b320dcbdfe49a832748a58/images/YvETR6OrurxhJV10Nucw-30CkIkKz1s1a3S_xykD39I.png",
+      "type": "Coffee shop",
+      "rating": 4.7,
+      "reviews": 2700,
+      "phone": null,
+      "website": null
+    },
+    "Kingdom": {
+      "name": "Kingdom",
+      "variants": [
+        "Kingdom"
+      ],
+      "address": "505 E 7th St",
+      "lat": 30.267279,
+      "lng": -97.73756,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267279,-97.73756",
+      "thumbnail": "https://serpapi.com/searches/69b320e7b6a867fea4178342/images/MWRiFBIHs-XVmdb_m90-K38f1b11Hq0WMouKS_hsMFc.jpeg",
+      "type": "Night club",
+      "rating": 4.1,
+      "reviews": 396,
+      "phone": null,
+      "website": null
+    },
+    "La Volta Pizza": {
+      "name": "La Volta Pizza",
+      "variants": [
+        "La Volta Pizza"
+      ],
+      "address": "900 W 10th St",
+      "lat": 30.274973,
+      "lng": -97.75171,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.274973,-97.75171",
+      "thumbnail": "https://serpapi.com/searches/69b320e89701217075c70167/images/FyQY9dD_6Cgu5-Mt42VQtsXnTuJ46p493angVqzsB-0.jpeg",
+      "type": "Italian",
+      "rating": 4.6,
+      "reviews": 471,
+      "phone": null,
+      "website": null
+    },
+    "Lamberts": {
+      "name": "Lamberts",
+      "variants": [
+        "Lamberts"
+      ],
+      "address": "401 W 2nd St",
+      "lat": 30.265226,
+      "lng": -97.74791,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.265226,-97.74791",
+      "thumbnail": "https://serpapi.com/searches/69b320ec09a51aa6930c33df/images/mFdTLwVkdHjby6Ht3pYWpNS3meMTN8ay2lXRQZhPhDo.png",
+      "type": "Barbecue",
+      "rating": 4.4,
+      "reviews": 2100,
+      "phone": null,
+      "website": null
+    },
+    "Las Perlas": {
+      "name": "Las Perlas",
+      "variants": [
+        "Las Perlas"
+      ],
+      "address": "405 E 7th St",
+      "lat": 30.267689,
+      "lng": -97.738625,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267689,-97.738625",
+      "thumbnail": "https://serpapi.com/searches/69b320f006ca7f5a0856c4ba/images/rpxbElzOcobVXzHYz9UD78wghrdkpOoH3LzRGYJjCGs.jpeg",
+      "type": "Bar",
+      "rating": 4.6,
+      "reviews": 362,
+      "phone": null,
+      "website": null
+    },
+    "Lefty’s Brick Bar": {
+      "name": "Lefty’s Brick Bar",
+      "variants": [
+        "Lefty’s Brick Bar"
+      ],
+      "address": "1813 C E 6th St",
+      "lat": 30.261866,
+      "lng": -97.72314,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.261866,-97.72314",
+      "thumbnail": "https://serpapi.com/searches/69b320f4fd81c8a922c2d142/images/cyt1phM9bm9Z_jIxADUFVoqdXoFXQcjYTL75dSnO3b4.jpeg",
+      "type": "Bar",
+      "rating": 4.4,
+      "reviews": 330,
+      "phone": null,
+      "website": null
+    },
+    "Low Down Lounge": {
+      "name": "Low Down Lounge",
+      "variants": [
+        "Low Down Lounge"
+      ],
+      "address": "1412 E 6th St",
+      "lat": 30.263588,
+      "lng": -97.72761,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.263588,-97.72761",
+      "thumbnail": "https://serpapi.com/searches/69b320fd1cff19018f12eee4/images/np0igtRP7s93yG1MzqzD_1A1z1fIsmzaYG1wsTNDHrg.jpeg",
+      "type": "Bar",
+      "rating": 4.4,
+      "reviews": 159,
+      "phone": null,
+      "website": null
+    },
+    "Mala Fama": {
+      "name": "Mala Fama",
+      "variants": [
+        "Mala Fama Rooftop",
+        "Nivel @ Mala Fama"
+      ],
+      "address": "422 E 6th St",
+      "lat": 30.266968,
+      "lng": -97.7384,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266968,-97.7384",
+      "thumbnail": "https://serpapi.com/searches/69b32100277143392def57d0/images/kZWQrDg1H0pwmKVvpwt-H0CX1ikrah0tdLt3xq-oC1c.jpeg",
+      "type": "Night club",
+      "rating": 3.7,
+      "reviews": 110,
+      "phone": null,
+      "website": null
+    },
+    "Mala Vida": {
+      "name": "Mala Vida",
+      "variants": [
+        "Mala Vida"
+      ],
+      "address": "708 E 6th St",
+      "lat": 30.266249,
+      "lng": -97.73551,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266249,-97.73551",
+      "thumbnail": "https://serpapi.com/searches/69b32102fbe53bbd7471064e/images/Sctz4Dn3XCfet0HEJua9N34w3kSts6Zq0bn2de3igyE.jpeg",
+      "type": "Night club",
+      "rating": 4,
+      "reviews": 723,
+      "phone": null,
+      "website": null
+    },
+    "Marlow": {
+      "name": "Marlow",
+      "variants": [
+        "Marlow"
+      ],
+      "address": "700 E 6th St",
+      "lat": 30.266266,
+      "lng": -97.73589,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266266,-97.73589",
+      "thumbnail": "https://serpapi.com/searches/69b3210895e9509fee86bab1/images/cGxkVcYR6qB1ElOgnuJWtKjZVdhkvkXCHPW0YPRoZQU.jpeg",
+      "type": "Bar",
+      "rating": 4.8,
+      "reviews": 143,
+      "phone": null,
+      "website": null
+    },
+    "Meanwhile Brewing": {
+      "name": "Meanwhile Brewing",
+      "variants": [
+        "Meanwhile Brewing"
+      ],
+      "address": "3901 Promontory Point Dr",
+      "lat": 30.2087,
+      "lng": -97.72967,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.2087,-97.72967",
+      "thumbnail": "https://serpapi.com/searches/69b3210a7af89993eb59f494/images/j2wdh1tkIz42l9sggC50CzbbKNLQbXeDD_P0aD67Yyo.jpeg",
+      "type": "Brewery",
+      "rating": 4.7,
+      "reviews": 1300,
+      "phone": null,
+      "website": null
+    },
+    "Mohawk": {
+      "name": "Mohawk",
+      "variants": [
+        "Mohawk",
+        "Mohawk Indoor",
+        "Mohawk Outdoor"
+      ],
+      "address": "912 Red River St",
+      "lat": 30.270126,
+      "lng": -97.73609,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.270126,-97.73609",
+      "thumbnail": "https://serpapi.com/searches/69b3210ee22fedeb307e1061/images/GZgG4BoBeFt64OITuB8vOsEfvPBVHGmOg4p3mz1x5wU.jpeg",
+      "type": "Live Music",
+      "rating": 4.6,
+      "reviews": 2400,
+      "phone": null,
+      "website": null
+    },
+    "Moody Theater": {
+      "name": "Moody Theater",
+      "variants": [
+        "Moody Theater"
+      ],
+      "address": "310 W Willie Nelson Blvd",
+      "lat": 30.265263,
+      "lng": -97.746994,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.265263,-97.746994",
+      "thumbnail": "https://serpapi.com/searches/69b321149a1f2cd1891eef5c/images/djMB7y_Bk7AED4PuJsphnpY1fkA_Vff7aTxguIkjxtM.jpeg",
+      "type": "Live Music",
+      "rating": 4.7,
+      "reviews": 4500,
+      "phone": null,
+      "website": null
+    },
+    "Neon Grotto": {
+      "name": "Neon Grotto",
+      "variants": [
+        "Neon Grotto",
+        "Neon Grotto Rooftop"
+      ],
+      "address": "318 Colorado St",
+      "lat": 30.266405,
+      "lng": -97.74505,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266405,-97.74505",
+      "thumbnail": "https://serpapi.com/searches/69b3211a6539a2b61c0c0d00/images/upjcnGNigzi2C9hXc8Bw9euQesUqX1qaF_hiS815VbQ.jpeg",
+      "type": "Bar",
+      "rating": 3.9,
+      "reviews": 94,
+      "phone": null,
+      "website": null
+    },
+    "Palm Door": {
+      "name": "Palm Door",
+      "variants": [
+        "Palm Door",
+        "Palm Door Patio"
+      ],
+      "address": "508 E 6th St",
+      "lat": 30.26691,
+      "lng": -97.737724,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26691,-97.737724",
+      "thumbnail": "https://serpapi.com/searches/69b3211e304eba6aed8105ed/images/LCt_bSmAn243nPy4IjWGiQT_4lpxqpqFm_DvekRCnmM.jpeg",
+      "type": "Event venue",
+      "rating": 4.7,
+      "reviews": 3,
+      "phone": null,
+      "website": null
+    },
+    "Pearl St Co-Op": {
+      "name": "Pearl St Co-Op",
+      "variants": [
+        "Pearl St Co-Op",
+        "Pearl St Co-op"
+      ],
+      "address": "2000 Pearl St",
+      "lat": 30.283972,
+      "lng": -97.74681,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.283972,-97.74681",
+      "thumbnail": null,
+      "type": "Housing cooperative",
+      "rating": 4,
+      "reviews": 94,
+      "phone": "(512) 476-5678",
+      "website": null
+    },
+    "Radio East": {
+      "name": "Radio East",
+      "variants": [
+        "Radio East",
+        "Radio/East"
+      ],
+      "address": "3504 Montopolis Dr",
+      "lat": 30.208027,
+      "lng": -97.71548,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.208027,-97.71548",
+      "thumbnail": "https://serpapi.com/searches/69b3212601289bdd5ee7d78f/images/DEjulq0KW2vy353QKUvuU5mzs92SIvN5ztrpRGBDI0I.jpeg",
+      "type": "Coffee shop",
+      "rating": 4.7,
+      "reviews": 515,
+      "phone": null,
+      "website": null
+    },
+    "Rivian Electric Roadhouse": {
+      "name": "Rivian Electric Roadhouse",
+      "variants": [
+        "Rivian Electric Roadhouse"
+      ],
+      "address": "208 S Congress Ave",
+      "lat": 30.259756,
+      "lng": -97.74626,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.259756,-97.74626",
+      "thumbnail": null,
+      "type": null,
+      "rating": null,
+      "reviews": null,
+      "phone": "(512) 387-7760",
+      "website": null
+    },
+    "Riviere": {
+      "name": "Riviere",
+      "variants": [
+        "Riviere"
+      ],
+      "address": "1501 E 7th St",
+      "lat": 30.264053,
+      "lng": -97.726944,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.264053,-97.726944",
+      "thumbnail": "https://serpapi.com/searches/69b3212ee22fedd4981b69bc/images/WIRL2qrvm53PsbgUUIjlJ9Z_TsPkQ92XL8Cb3UVIaQM.jpeg",
+      "type": "Bar",
+      "rating": 4.7,
+      "reviews": 92,
+      "phone": null,
+      "website": null
+    },
+    "Sahara Lounge": {
+      "name": "Sahara Lounge",
+      "variants": [
+        "Sahara Lounge"
+      ],
+      "address": "1413 Webberville Rd",
+      "lat": 30.279451,
+      "lng": -97.68157,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.279451,-97.68157",
+      "thumbnail": "https://serpapi.com/searches/69b32131ad9ecfff3313c232/images/h4YQbDaBPE69G-1z2FIxWYjviiNPkePUwycTAYj5MIE.jpeg",
+      "type": "Live music bar",
+      "rating": 4.6,
+      "reviews": 1100,
+      "phone": null,
+      "website": null
+    },
+    "Saxon Pub": {
+      "name": "Saxon Pub",
+      "variants": [
+        "Saxon Pub"
+      ],
+      "address": "1320 S Lamar Blvd",
+      "lat": 30.253563,
+      "lng": -97.763565,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.253563,-97.763565",
+      "thumbnail": "https://serpapi.com/searches/69b321396372f35eb126604f/images/Z_Qh-cuqbXgoooDb4WpQ_N5IrlnRh0-O1kJ6U5Fp0Yk.jpeg",
+      "type": "Live Music",
+      "rating": 4.7,
+      "reviews": 1300,
+      "phone": null,
+      "website": null
+    },
+    "Scholz Garten": {
+      "name": "Scholz Garten",
+      "variants": [
+        "Scholz Garten"
+      ],
+      "address": "1607 San Jacinto Blvd",
+      "lat": 30.277895,
+      "lng": -97.73624,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.277895,-97.73624",
+      "thumbnail": "https://serpapi.com/searches/69b3213a31a6013dd06d2f72/images/8dod392t0G86WYB9HBl7OY5G_KND_THQ8BIEx5ml0QI.jpeg",
+      "type": "German",
+      "rating": 4.4,
+      "reviews": 3100,
+      "phone": null,
+      "website": null
+    },
+    "Seven Grand": {
+      "name": "Seven Grand",
+      "variants": [
+        "Seven Grand"
+      ],
+      "address": "405 E 7th St",
+      "lat": 30.267788,
+      "lng": -97.738594,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267788,-97.738594",
+      "thumbnail": "https://serpapi.com/searches/69b32143d0a88f22190f4594/images/3HmR8tLIYEb-M46Ant2SSLZVrah3WENLTDPEAlT3GZE.jpeg",
+      "type": "Bar",
+      "rating": 4.7,
+      "reviews": 695,
+      "phone": null,
+      "website": null
+    },
+    "Seven Spirits": {
+      "name": "Seven Spirits",
+      "variants": [
+        "Seven Spirits"
+      ],
+      "address": "1411 E 7th St B",
+      "lat": 30.264109,
+      "lng": -97.72736,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.264109,-97.72736",
+      "thumbnail": "https://serpapi.com/searches/69b3214773bf5981ffd0a7dc/images/pYe4wlSMpLGaqRmlLB3gJZFZqtA_N2yhjNwGhwFtu40.jpeg",
+      "type": "Bar",
+      "rating": 4.7,
+      "reviews": 106,
+      "phone": null,
+      "website": null
+    },
+    "Shangri-La": {
+      "name": "Shangri-La",
+      "variants": [
+        "Shangri-La"
+      ],
+      "address": "1016 E 6th St",
+      "lat": 30.265047,
+      "lng": -97.731575,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.265047,-97.731575",
+      "thumbnail": null,
+      "type": null,
+      "rating": null,
+      "reviews": null,
+      "phone": "(512) 524-4291",
+      "website": null
+    },
+    "Side Bar": {
+      "name": "Side Bar",
+      "variants": [
+        "Side Bar In",
+        "Side Bar Inside",
+        "Side Bar Out",
+        "Side Bar Patio"
+      ],
+      "address": "602 E 7th St",
+      "lat": 30.26744,
+      "lng": -97.73644,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26744,-97.73644",
+      "thumbnail": "https://serpapi.com/searches/69b32150974bbb97e428ffe3/images/0yUvLEv3u6i1iJCAQQW1KOrcgWqOTxuAHun7FffP1rc.jpeg",
+      "type": "Bar",
+      "rating": 4,
+      "reviews": 411,
+      "phone": null,
+      "website": null
+    },
+    "Speakeasy": {
+      "name": "Speakeasy",
+      "variants": [
+        "Speakeasy"
+      ],
+      "address": "412 N Congress Ave D",
+      "lat": 30.266808,
+      "lng": -97.7435,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266808,-97.7435",
+      "thumbnail": "https://serpapi.com/searches/69b32152c75443e0e7ad92bb/images/2OU9I4GmvnHWfrjZSjI8kPB1ohyXWxV7QAd_daK9WZQ.jpeg",
+      "type": "Lounge bar",
+      "rating": 4.4,
+      "reviews": 1900,
+      "phone": null,
+      "website": null
+    },
+    "Springdale Station": {
+      "name": "Springdale Station",
+      "variants": [
+        "Springdale Station"
+      ],
+      "address": "979 Springdale Rd Suite #160",
+      "lat": 30.262428,
+      "lng": -97.69657,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.262428,-97.69657",
+      "thumbnail": "https://serpapi.com/searches/69b321537223f484fc6be73f/images/SFLiqABo4sf_d7Y-m4un-hlgs7t9J39wdFiJkqPtJXk.jpeg",
+      "type": "Event venue",
+      "rating": 4.7,
+      "reviews": 140,
+      "phone": null,
+      "website": null
+    },
+    "Stargazer": {
+      "name": "Stargazer",
+      "variants": [
+        "Stargazer"
+      ],
+      "address": "979 Springdale Rd Ste. 130",
+      "lat": 30.262733,
+      "lng": -97.696175,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.262733,-97.696175",
+      "thumbnail": "https://serpapi.com/searches/69b32156c20348a4b4af71cb/images/lvCD1LXbxiOXezBHWqxlY1DNz8-VEYlNINMS6wymHQk.jpeg",
+      "type": "Bar",
+      "rating": 4.6,
+      "reviews": 132,
+      "phone": null,
+      "website": null
+    },
+    "Stubb’s": {
+      "name": "Stubb’s",
+      "variants": [
+        "Stubb’s"
+      ],
+      "address": "801 Red River St",
+      "lat": 30.268494,
+      "lng": -97.73626,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.268494,-97.73626",
+      "thumbnail": "https://serpapi.com/searches/69b3215a04e10a8756b8eac0/images/5rfk-LbkLMkJ47xYapF9PmtbIdKDCZI9cNYCvwWRQCE.jpeg",
+      "type": "Barbecue",
+      "rating": 4.3,
+      "reviews": 6800,
+      "phone": null,
+      "website": null
+    },
+    "Swan Dive": {
+      "name": "Swan Dive",
+      "variants": [
+        "Swan Dive",
+        "Swan Dive Patio"
+      ],
+      "address": "615 Red River St",
+      "lat": 30.267168,
+      "lng": -97.73679,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267168,-97.73679",
+      "thumbnail": "https://serpapi.com/searches/69b3216012eb14516fe4d06b/images/iGtJkt1A_hC1W04WSLBfjTq1gUl98zwS488j3AJLDpo.jpeg",
+      "type": "Live Music",
+      "rating": 4,
+      "reviews": 101,
+      "phone": null,
+      "website": null
+    },
+    "Taco n Maiz": {
+      "name": "Taco n Maiz",
+      "variants": [
+        "Taco n Maiz"
+      ],
+      "address": "603 Sabine St",
+      "lat": 30.266472,
+      "lng": -97.73584,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266472,-97.73584",
+      "thumbnail": "https://serpapi.com/searches/69b3216448c791cdb590998d/images/7tSOSO2JlYmSDhZwLVRY128us-m4WxHK0Pt3FZOKsj8.png",
+      "type": "Grill",
+      "rating": 4.9,
+      "reviews": 46,
+      "phone": null,
+      "website": null
+    },
+    "The 13th Floor": {
+      "name": "The 13th Floor",
+      "variants": [
+        "The 13th Floor"
+      ],
+      "address": "711 Red River St",
+      "lat": 30.267784,
+      "lng": -97.736595,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267784,-97.736595",
+      "thumbnail": "https://serpapi.com/searches/69b3216f532a17ba266c5410/images/so6U-QZrdFbOdGoy_t-eEV0BzYAkoAB4H5MNIoCTDgw.jpeg",
+      "type": "Bar",
+      "rating": 4.7,
+      "reviews": 170,
+      "phone": null,
+      "website": null
+    },
+    "The Courtyard ATX": {
+      "name": "The Courtyard ATX",
+      "variants": [
+        "The Courtyard ATX"
+      ],
+      "address": "208 W 4th St suite c",
+      "lat": 30.266863,
+      "lng": -97.74529,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266863,-97.74529",
+      "thumbnail": "https://serpapi.com/searches/69b32174bca7e5bc25dce0e4/images/M1LrC0v-6UCsY2AYub5qcnV-bqQMn6RtUdcW1vVPkpM.jpeg",
+      "type": "Live Music",
+      "rating": 4.1,
+      "reviews": 35,
+      "phone": null,
+      "website": null
+    },
+    "The Creek and the Cave": {
+      "name": "The Creek and the Cave",
+      "variants": [
+        "The Creek and the Cave",
+        "The Creek and the Cave Backyard"
+      ],
+      "address": "611 E 7th St",
+      "lat": 30.26711,
+      "lng": -97.736305,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26711,-97.736305",
+      "thumbnail": "https://serpapi.com/searches/69b32176f3fc7b52c600ebe5/images/4pApzA8t34SfZ5fKgkY6yNHkeYUu8UEZDRhvibhr0k0.jpeg",
+      "type": "Comedy club",
+      "rating": 4.6,
+      "reviews": 666,
+      "phone": null,
+      "website": null
+    },
+    "The Liberty": {
+      "name": "The Liberty",
+      "variants": [
+        "The Liberty"
+      ],
+      "address": "1618 E 6th St",
+      "lat": 30.262653,
+      "lng": -97.7251,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.262653,-97.7251",
+      "thumbnail": "https://serpapi.com/searches/69b321783b93e32b136129e0/images/kWUsa1O6yHb9E3ScD_zh8lk63lmDBhVeTTWR-fH981M.jpeg",
+      "type": "Bar",
+      "rating": 4.5,
+      "reviews": 770,
+      "phone": null,
+      "website": null
+    },
+    "The Lucky Duck": {
+      "name": "The Lucky Duck",
+      "variants": [
+        "The Lucky Duck"
+      ],
+      "address": "1300 E 6th St",
+      "lat": 30.264078,
+      "lng": -97.72925,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.264078,-97.72925",
+      "thumbnail": null,
+      "type": null,
+      "rating": null,
+      "reviews": null,
+      "phone": "(512) 537-1519",
+      "website": null
+    },
+    "The Pershing": {
+      "name": "The Pershing",
+      "variants": [
+        "The Pershing"
+      ],
+      "address": "2415B E 5th St. Unit B",
+      "lat": 30.257528,
+      "lng": -97.715385,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.257528,-97.715385",
+      "thumbnail": "https://serpapi.com/searches/69b32180d99612ea7874f25c/images/ITG4AijPQGrFlVXk14M-0AqzP86CrcNi3qqyO9a9tOs.jpeg",
+      "type": "Club",
+      "rating": 4.4,
+      "reviews": 182,
+      "phone": null,
+      "website": null
+    },
+    "The White Horse": {
+      "name": "The White Horse",
+      "variants": [
+        "The White Horse"
+      ],
+      "address": "500 Comal St",
+      "lat": 30.26262,
+      "lng": -97.72698,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26262,-97.72698",
+      "thumbnail": "https://serpapi.com/searches/69b3218266bc784f0d63b545/images/uup2gcu85tXuy2m5yKl2PhQbg5Y7veYuwKBF71p6-bI.jpeg",
+      "type": "Bar",
+      "rating": 4.4,
+      "reviews": 2300,
+      "phone": null,
+      "website": null
+    },
+    "Tweedy's": {
+      "name": "Tweedy's",
+      "variants": [
+        "Tweedy's"
+      ],
+      "address": "2908 Fruth St B Unit 101",
+      "lat": 30.295471,
+      "lng": -97.74168,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.295471,-97.74168",
+      "thumbnail": "https://serpapi.com/searches/69b32187f607a9f7f50f9ffc/images/kuDn_Bdlj8Ney4BquD600UUaoJDHVO7jFgFiMPzdbsU.jpeg",
+      "type": "Bar",
+      "rating": 4.4,
+      "reviews": 151,
+      "phone": null,
+      "website": null
+    },
+    "Valhalla": {
+      "name": "Valhalla",
+      "variants": [
+        "Valhalla"
+      ],
+      "address": "710 Red River St",
+      "lat": 30.268028,
+      "lng": -97.73678,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.268028,-97.73678",
+      "thumbnail": "https://serpapi.com/searches/69b3218a0676dc2c0666493f/images/seOZnX5I2h0fpSLW8h5tn7Y5UgDOpfuS8E4b9GU1FY0.jpeg",
+      "type": "Bar",
+      "rating": 4.6,
+      "reviews": 282,
+      "phone": null,
+      "website": null
+    },
+    "Venue 6": {
+      "name": "Venue 6",
+      "variants": [
+        "Venue 6"
+      ],
+      "address": "516 E 6th St",
+      "lat": 30.266739,
+      "lng": -97.73758,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.266739,-97.73758",
+      "thumbnail": "https://serpapi.com/searches/69b3218f3a9206bbd8042878/images/HvNkAO9-lK3ua2rYHvwO2e-zCmSgR8-zoyhN9kuX17g.webp",
+      "type": "Event venue",
+      "rating": null,
+      "reviews": null,
+      "phone": null,
+      "website": null
+    },
+    "Victory Grill": {
+      "name": "Victory Grill",
+      "variants": [
+        "Victory Grill"
+      ],
+      "address": "1104 E 11th St",
+      "lat": 30.269175,
+      "lng": -97.72856,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.269175,-97.72856",
+      "thumbnail": "https://serpapi.com/searches/69b321924c437fc52bff70e5/images/k966KoYePo0-GmeXVbN4EGEWWmDZsORBuSwaj2tV4bo.jpeg",
+      "type": "Southern",
+      "rating": 4,
+      "reviews": 526,
+      "phone": null,
+      "website": null
+    },
+    "Volstead": {
+      "name": "Volstead",
+      "variants": [
+        "Volstead"
+      ],
+      "address": "1500 E 6th St",
+      "lat": 30.26339,
+      "lng": -97.72731,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26339,-97.72731",
+      "thumbnail": "https://serpapi.com/searches/69b321946e2237dc38f37737/images/XUksR8DcUipwYyvNX57tC8BovW43ge_dJL7uvn5Ek-Y.jpeg",
+      "type": "Bar",
+      "rating": 4.5,
+      "reviews": 619,
+      "phone": null,
+      "website": null
+    },
+    "Vulcan Gas Co": {
+      "name": "Vulcan Gas Co",
+      "variants": [
+        "Vulcan Gas Co"
+      ],
+      "address": "418 E 6th St",
+      "lat": 30.267038,
+      "lng": -97.73852,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.267038,-97.73852",
+      "thumbnail": "https://serpapi.com/searches/69b32199d0a88f400f8a1447/images/kSsjy0tA52CPxtrpqaynzasmoDOiF6FGCPRFyX03kNE.jpeg",
+      "type": "Comedy club",
+      "rating": 3.5,
+      "reviews": 572,
+      "phone": null,
+      "website": null
+    },
+    "Walter's Tavern": {
+      "name": "Walter's Tavern",
+      "variants": [
+        "Walter's Tavern"
+      ],
+      "address": "2336 S Congress Ave",
+      "lat": 30.239265,
+      "lng": -97.753716,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.239265,-97.753716",
+      "thumbnail": "https://serpapi.com/searches/69b3219ed1a72b1513681a2b/images/WnAA-qG6ihBEpZ84S-TKEWvSGwNPxUePcJosj3Ppa7A.jpeg",
+      "type": "Cocktail bar",
+      "rating": 4.4,
+      "reviews": 618,
+      "phone": null,
+      "website": null
+    },
+    "Wanderlust Wine Co.": {
+      "name": "Wanderlust Wine Co.",
+      "variants": [
+        "Wanderlust Wine Co."
+      ],
+      "address": "1601 Barton Springs Rd",
+      "lat": 30.26197,
+      "lng": -97.76176,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26197,-97.76176",
+      "thumbnail": "https://serpapi.com/searches/69b321a4dc74d05c92f04ffa/images/qWh_FNaPngoZXR_76zYcMdxJYXdvPRdRPVUYNlyVCeI.jpeg",
+      "type": "Winery",
+      "rating": 4.4,
+      "reviews": 67,
+      "phone": null,
+      "website": null
+    },
+    "Waterloo Records": {
+      "name": "Waterloo Records",
+      "variants": [
+        "Waterloo Records"
+      ],
+      "address": "1105 N Lamar Blvd",
+      "lat": 30.276068,
+      "lng": -97.75137,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.276068,-97.75137",
+      "thumbnail": "https://serpapi.com/searches/69b321a69df9dd55b4da2812/images/fbub8IHhVE330rOldpYUb1ve1PQ3zRbGwt2_NSALPXc.jpeg",
+      "type": "Music store",
+      "rating": 4.7,
+      "reviews": 2800,
+      "phone": "(512) 474-2500",
+      "website": null
+    },
+    "Webberville Food Truck Park": {
+      "name": "Webberville Food Truck Park",
+      "variants": [
+        "Webberville Food Truck Park"
+      ],
+      "address": "2505 Webberville Rd",
+      "lat": 30.26299,
+      "lng": -97.71378,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.26299,-97.71378",
+      "thumbnail": "https://serpapi.com/searches/69b321ab217adee8fe188d47/images/KFXwJHBKIiynioHaYQfwnCQ-tq-vnCSVmOliXpbOKvU.jpeg",
+      "type": "Food court",
+      "rating": 4.2,
+      "reviews": 5,
+      "phone": null,
+      "website": null
+    },
+    "Yeti Flagship": {
+      "name": "Yeti Flagship",
+      "variants": [
+        "Yeti Flagship"
+      ],
+      "address": "220 S Congress Ave",
+      "lat": 30.259289,
+      "lng": -97.7463,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.259289,-97.7463",
+      "thumbnail": "https://serpapi.com/searches/69b321b50fa72eff9b551c36/images/S59qDtGBqGquqUCbYYS_yXpe0afcKb1pRsxfKJCjLfU.jpeg",
+      "type": "Sporting goods store",
+      "rating": 4.5,
+      "reviews": 1500,
+      "phone": "(512) 640-7249",
+      "website": null
+    },
+    "Zilker Brewing": {
+      "name": "Zilker Brewing",
+      "variants": [
+        "Zilker Brewing"
+      ],
+      "address": "1701 E 6th St",
+      "lat": 30.262196,
+      "lng": -97.72452,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=30.262196,-97.72452",
+      "thumbnail": "https://serpapi.com/searches/69b321b75e349427bc7f5f96/images/7vMCoTlOOgI-kl1r2K9Kc4BtIDsWhAxX8Up0FAadEAQ.jpeg",
+      "type": "Brewery",
+      "rating": 4.7,
+      "reviews": 840,
+      "phone": null,
+      "website": null
+    }
+  }
+}
