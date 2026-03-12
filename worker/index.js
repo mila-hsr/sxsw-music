@@ -11,7 +11,15 @@ export default {
       return new Response(null, { headers: corsHeaders() });
     }
 
-    const pathname = url.pathname.replace(/\/+$/, '') || '/';
+    // Strip /music prefix when routed via sxsw.md/music/*
+    const rawPathname = url.pathname.replace(/\/+$/, '') || '/';
+    const pathname = rawPathname.replace(/^\/music/, '') || '/';
+
+    // ── Direct file requests (JSON, MD) — serve as-is from assets ──
+    if (pathname.match(/\.(json|md)$/)) {
+      const ct = pathname.endsWith('.json') ? 'application/json; charset=utf-8' : 'text/markdown; charset=utf-8';
+      return serveAsset(env, pathname, ct);
+    }
 
     // ── /schedule routes ──
     if (pathname === '/schedule' || pathname.match(/^\/schedule\/\d{4}-\d{2}-\d{2}$/)) {
@@ -93,7 +101,8 @@ async function serveAsset(env, path, contentType, rewritePaths = false) {
   if (rewritePaths) {
     // Rewrite relative paths for /music/ prefix
     body = body.replace(/fetch\(['"]\.\/artists\.json['"]\)/g, "fetch('/music/artists.json')");
-    body = body.replace(/fetch\(['"]\.\/schedule\//g, "fetch('/music/schedule/");
+    body = body.replace(/fetch\('\.\/schedule\//g, "fetch('/music/schedule/");
+    body = body.replace(/fetch\(`\.\/schedule\//g, "fetch(`/music/schedule/");
   }
   return new Response(body, {
     headers: {
