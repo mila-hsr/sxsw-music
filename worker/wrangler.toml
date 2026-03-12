@@ -2,9 +2,6 @@ name = "sxsw-music"
 main = "index.js"
 compatibility_date = "2026-03-01"
 
-[triggers]
-routes = ["sxsw.md/music/*"]
-
 [assets]
 directory = "../dist"
 binding = "ASSETS"
